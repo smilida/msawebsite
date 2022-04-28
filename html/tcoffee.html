@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>T-Coffee</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="msaligners.html" class="current">序列比对器</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="https://github.com/malabz/JMSA" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>T-Coffee</h1>
+</div>
+<h2>安装（Unix系统下）</h2>
+<h3>安装T-Coffee</h3>
+<div class="codeblock">
+<div class="blocktitle">安装示例：</div>
+<div class="blockcontent"><pre>
+<span class = "comment"># 从以下网址下载与您的系统相对应的安装程序包：</span>
+  http://tcoffee.org/Packages/Stable/Latest/
+
+<span class = "comment"># 授予可执行权限：</span>
+$ chmod +x T-COFFEE_install_"version_x".bin
+
+<span class = "comment"># 运行</span>
+$ ./T-COFFEE_installer_"version_x".bin
+
+<span class = "comment"># 按照向导说明完成安装</span>
+
+<span class = "comment"># 打开一个新的终端会话以确保您的环境已更新</span>
+
+<span class = "comment"># 验证是否安装成功</span>
+$ t_coffee -version
+
+</pre></div></div>
+<p>详见：<a href="https://tcoffee.readthedocs.io/en/latest/tcoffee_installation.html" target=&ldquo;blank&rdquo;>T-Coffee官方手册</a>
+</p>
+<h2>使用</h2>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# 最基础的使用方法
+$ t_coffee sample_seq.fasta
+
+# 运行M-Coffee
+$ t_coffee sample_seq.fasta -mode mcoffee
+</pre></div></div>
+<h2>参考内容</h2>
+<ol>
+<li><p>Notredame, Cédric, Desmond G. Higgins, and Jaap Heringa. &ldquo;T-Coffee: A novel method for fast and accurate multiple sequence alignment.&rdquo; Journal of molecular biology 302.1 (2000): 205-217.
+</p>
+</li>
+<li><p>Wallace, Iain M., et al. &ldquo;M-Coffee: combining multiple sequence alignment methods with T-Coffee.&rdquo; Nucleic acids research 34.6 (2006): 1692-1699.
+</p>
+</li>
+<li><p><a href="https://tcoffee.readthedocs.io/en/latest/" target=&ldquo;blank&rdquo;>T-Coffee and related packages documentation</a>
+</p>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</body>
+</html>
