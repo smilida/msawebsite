@@ -1,0 +1,44 @@
+# jemdoc: menu{MENU}{msaligners.html}, nofooter
+= T-Coffee
+
+== 安装（Unix系统下）
+
+=== 安装T-Coffee
+~~~
+{安装示例：}{pyint}
+# 从以下网址下载与您的系统相对应的安装程序包：
+  http://tcoffee.org/Packages/Stable/Latest/
+
+# 授予可执行权限：
+$ chmod +x T-COFFEE_install_"version_x".bin
+
+# 运行
+$ ./T-COFFEE_installer_"version_x".bin
+
+# 按照向导说明完成安装
+
+# 打开一个新的终端会话以确保您的环境已更新
+
+# 验证是否安装成功
+$ t_coffee -version
+
+~~~
+
+详见：[https://tcoffee.readthedocs.io/en/latest/tcoffee_installation.html T-Coffee官方手册]
+
+== 使用
+~~~
+{}{}
+# 最基础的使用方法
+$ t_coffee sample_seq.fasta
+
+# 运行M-Coffee
+$ t_coffee sample_seq.fasta -mode mcoffee
+~~~
+
+== 参考内容
+. Notredame, Cédric, Desmond G. Higgins, and Jaap Heringa. "T-Coffee: A novel method for fast and accurate multiple sequence alignment." Journal of molecular biology 302.1 (2000): 205-217.
+. Wallace, Iain M., et al. "M-Coffee: combining multiple sequence alignment methods with T-Coffee." Nucleic acids research 34.6 (2006): 1692-1699.
+. [https://tcoffee.readthedocs.io/en/latest/ T-Coffee and related packages documentation]
+
+
