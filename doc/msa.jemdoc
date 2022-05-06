@@ -22,7 +22,7 @@ SP\_score(\alpha)=\sum_{i<j} score(\alpha_{ij})
 {算法实现思路}
 . 在序列中选择一个中心序列 \(S_c)\，中心序列的选择算法，在下文详细阐述
 . 将中心序列\(S_c)\和其余序列进行双序列比对，得到k\-1个双序列比对
-. 将k\-1个双序列比对进行整合，整合原则\“once a gap, always a gpa\”
+. 将k\-1个双序列比对进行整合，整合原则\“once a gap, always a gap\”
 ~~~
 
 === 例子
@@ -125,5 +125,3 @@ S4 ACTGACC
     S3:ATCTTC--TT
     S4:ACTGACC---
 ~~~
-
-[https://github.com/malabz/JMSA Python]
