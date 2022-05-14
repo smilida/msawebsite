@@ -17,7 +17,7 @@ SP\_score(\alpha)=\sum_{i<j} score(\alpha_{ij})
 
 === 参考内容
 . Altschul, Stephen F. "Gap costs for multiple sequence alignment." Journal of theoretical biology 138.3 (1989): 297-309.
-. [https://github.com/malabz/MSATOOLS/blob/main/SPscore/ SP源代码]
+. [https://github.com/malabz/MSATOOLS/tree/main/SPscore SP源代码]
 
 == Q score
 
