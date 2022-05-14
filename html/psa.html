@@ -60,8 +60,8 @@ MathJax.Hub.Config({
 \[
 a[i,j] = max 
 \begin{cases}
-a[i,j-1]-mis          &amp;\text{if  j&gt;0 and i &gt;= 0}\\
-a[i-1,j]-mis          &amp;\text{if  j&gt;=0 and i &gt; 0}\\
+a[i,j-1]-g          &amp;\text{if  j&gt;0 and i &gt;= 0}\\
+a[i-1,j]-g          &amp;\text{if  j&gt;=0 and i &gt; 0}\\
 a[i-1,j-1]+p(i,j)   &amp;\text{if  j&gt;0 and i &gt; 0}
 \end{cases}
 \]
@@ -70,7 +70,7 @@ a[i-1,j-1]+p(i,j)   &amp;\text{if  j&gt;0 and i &gt; 0}
 p(i,j) = 
 \begin{cases}
 +m  &amp;\text{if  s[i]==t[j]} \\
--g &amp;\text{if  s[i]\(\neq\)t[j]}
+-mis &amp;\text{if  s[i]\(\neq\)t[j]}
 \end{cases}
 \]
 </p><p><a href="https://nbviewer.jupyter.org/github/malabz/Jtmsa/blob/master/DynamicProgramming.ipynb" target=&ldquo;blank&rdquo;>Python</a>
@@ -123,16 +123,16 @@ p(i,j) =
 <div class="blocktitle">新打分机制</div>
 <div class="blockcontent">
 <ul>
-<li><p>match 匹配 +1
+<li><p>match 匹配 +m
 </p>
 </li>
-<li><p>mismatch 不匹配 -1
+<li><p>mismatch 不匹配 -mis
 </p>
 </li>
-<li><p>gap 缺失匹配首个 -h
+<li><p>gap 缺失匹配首个 -ogap
 </p>
 </li>
-<li><p>gap 缺失匹配非首个 -g
+<li><p>gap 缺失匹配非首个 -egap
 </p>
 </li>
 </ul>
@@ -154,8 +154,8 @@ p(i,j) =
 <div class="blocktitle">初始化转态表</div>
 <div class="blockcontent"><pre>
 a[0,0] = 0
-b[0,j] = -h-g(j-1)
-c[i,0] = -h-g(i-1)
+b[0,j] = -ogap-egap(j-1)
+c[i,0] = -ogap-egap(i-1)
 others = -inf
 </pre></div></div>
 <p><b>动态规划函数</b>
@@ -172,16 +172,16 @@ c[i-1,j-1]
 \[
 b[i,j] = max 
 \begin{cases} 
-a[i,j-1] -h -g\\
-b[i,j-1]-g
+a[i,j-1]-ogap\\
+b[i,j-1]-egap
 \end{cases}
 \]
 </p><p style="text-align:center">
 \[
 c[i,j] = max 
 \begin{cases} 
-a[i-1,j]-h-g\\
-c[i-1,j]-g
+a[i-1,j]-ogap\\
+c[i-1,j]-egap
 \end{cases}
 \]
 </p><p><a href="https://github.com/Guuhua/PSA/blob/main/python/PSA_Kband.py" target=&ldquo;blank&rdquo;>Python</a> <a href="https://github.com/Guuhua/PSA/blob/main/java/Kband.java" target=&ldquo;blank&rdquo;>Java</a> <a href="https://github.com/Guuhua/PSA/blob/main/c/PSA_kband.c" target=&ldquo;blank&rdquo;>C</a>
@@ -205,7 +205,8 @@ c[i-1,j]-g
 <li><p>基于后缀树的比对 <a href="https://github.com/Guuhua/PSA/blob/main/python/PSA_STree.py" target=&ldquo;blank&rdquo;>Python</a> <a href="https://github.com/Guuhua/PSA/blob/main/java/STAlign.java" target=&ldquo;blank&rdquo;>Java</a>
 </p>
 </li>
-<li><p>基于FM-index的比对 <a href="https://github.com/Guuhua/PSA/blob/main/java/FMAlign.java" target=&ldquo;blank&rdquo;>Java</a> <a href="https://github.com/Guuhua/PSA/blob/main/c/PSA_fmindex.c" target=&ldquo;blank&rdquo;>C</a></p>
+<li><p>基于FM-index的比对 <a href="https://github.com/Guuhua/PSA/blob/main/java/FMAlign.java" target=&ldquo;blank&rdquo;>Java</a> <a href="https://github.com/Guuhua/PSA/blob/main/c/PSA_fmindex.c" target=&ldquo;blank&rdquo;>C</a>
+</p>
 </li>
 </ul>
 </td>
