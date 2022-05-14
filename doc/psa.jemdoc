@@ -18,8 +18,8 @@
 \(
 a[i,j] = max 
 \begin{cases}
-a[i,j-1]-mis          &\text{if  j>0 and i >= 0}\\
-a[i-1,j]-mis          &\text{if  j>=0 and i > 0}\\
+a[i,j-1]-g          &\text{if  j>0 and i >= 0}\\
+a[i-1,j]-g          &\text{if  j>=0 and i > 0}\\
 a[i-1,j-1]+p(i,j)   &\text{if  j>0 and i > 0}
 \end{cases}
 \)
@@ -28,7 +28,7 @@ a[i-1,j-1]+p(i,j)   &\text{if  j>0 and i > 0}
 p(i,j) = 
 \begin{cases}
 +m  &\text{if  s[i]==t[j]} \\
--g &\text{if  s[i]$\neq$t[j]}
+-mis &\text{if  s[i]$\neq$t[j]}
 \end{cases}
 \)
 
@@ -79,10 +79,10 @@ kband算法的时间和空间复杂度降为O(kn)。
 
 ~~~
 {新打分机制}
-- match 匹配 +1
-- mismatch 不匹配 -1
-- gap 缺失匹配首个 -h
-- gap 缺失匹配非首个 -g
+- match 匹配 +m
+- mismatch 不匹配 -mis
+- gap 缺失匹配首个 -ogap
+- gap 缺失匹配非首个 -egap
 ~~~
 
 *三个状态表*
@@ -93,8 +93,8 @@ kband算法的时间和空间复杂度降为O(kn)。
 ~~~
 {初始化转态表}{python}
 a[0,0] = 0
-b[0,j] = -h-g(j-1)
-c[i,0] = -h-g(i-1)
+b[0,j] = -ogap-egap(j-1)
+c[i,0] = -ogap-egap(i-1)
 others = -inf
 ~~~
 
@@ -110,16 +110,16 @@ c[i-1,j-1]
 \(
 b[i,j] = max 
 \begin{cases} 
-a[i,j-1] -h -g\\
-b[i,j-1]-g
+a[i,j-1]-ogap\\
+b[i,j-1]-egap
 \end{cases}
 \)
 
 \(
 c[i,j] = max 
 \begin{cases} 
-a[i-1,j]-h-g\\
-c[i-1,j]-g
+a[i-1,j]-ogap\\
+c[i-1,j]-egap
 \end{cases}
 \)
 
