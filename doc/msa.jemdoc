@@ -70,8 +70,16 @@ S5 ACTGACC
 由上文可知，建立得分矩阵选取中心序列是非常耗时的。因此在建立得分矩阵的这个环节，我们可以采取多核并行，加快程序的运行速度。由实际的运行速度来看，并行计算要比单核运行快3.6倍左右（根据电脑的核心数有关，测试电脑的核心数是4核）。
 
 
-
 [https://github.com/malabz/Jtmsa/blob/master/MSA_Star_Multi_core.py Python]
+
+
+=== 内存优化
+
+
+针对大型数据集，不能一次将数据读入内存，采取分批次的读取，能有效降低内存的使用。内存消耗由双序列比对和块的大小决定，块最小为一条序列，最大为输入文件的大小。
+
+
+[https://github.com/malabz/Jtmsa/blob/master/BufferCenterAlign.py Python]
 
 
 == 树比对
