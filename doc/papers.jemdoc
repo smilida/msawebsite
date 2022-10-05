@@ -7,18 +7,20 @@
 
 2. [https://link.springer.com/content/pdf/10.1186/s13015-017-0116-x.pdf *HAlign-II*]: efficient ultra-large multiple sequence alignment and phylogenetic tree reconstruction with distributed and parallel computing. *Algorithms for Molecular Biology*. 2017 ([https://github.com/malabz/HAlign soft])
 
-3. [https://doi.org/10.1093/molbev/msac166 *HAlign 3*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
+3. [https://doi.org/10.1093/molbev/msac166 *HAlign-III*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
 
 
 == MSA
 
-1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*] : a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
+1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*]: a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
 
 2. [https://link.springer.com/article/10.1186/s12918-017-0476-3 Reconstructing evolutionary trees in parallel for massive sequences]. *BMC Systems Biology*. 2017
 
 3. [https://www.liebertpub.com/doi/10.1089/cmb.2017.0040 Multiple Sequence Alignment Based on a Suffix Tree and Center-Star Strategy]: A Linear Method for Multiple Nucleotide Sequence Alignment on Spark Parallel Framework. *Journal of Computational Biology*. 2017
 
-4. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
+4. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. Briefings in Bioinformatics. 2021
+
+5. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
 
 == Reviews
 
