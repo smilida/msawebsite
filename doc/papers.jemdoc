@@ -16,15 +16,23 @@
 
 2. [https://link.springer.com/article/10.1186/s12918-017-0476-3 Reconstructing evolutionary trees in parallel for massive sequences]. *BMC Systems Biology*. 2017
 
-3. [https://www.liebertpub.com/doi/10.1089/cmb.2017.0040 Multiple Sequence Alignment Based on a Suffix Tree and Center-Star Strategy]: A Linear Method for Multiple Nucleotide Sequence Alignment on Spark Parallel Framework. *Journal of Computational Biology*. 2017
+3. [https://www.liebertpub.com/doi/10.1089/cmb.2017.0040 Multiple Sequence Alignment Based on a Suffix Tree and Center-Star Strategy]: A Linear Method for Multiple Nucleotide Sequence Alignment on Spark Parallel Framework. *Journal of Computational Biology*. 2017 ([https://github.com/suwenhecn/MASC soft])
 
-4. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. *Briefings in Bioinformatics*. 2021
+4. [http://www.jgenetgenomics.org/en/article/doi/10.1016/j.jgg.2018.07.004 *VCSRA*]: A fast and accurate multiple sequence alignment algorithm with a high degree of parallelism. *Journal of Genetics and Genomics*. 2018 ([https://github.com/DongDongNeophyte/VCSRA_code soft])
 
-5. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
+5. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. *Briefings in Bioinformatics*. 2021
 
-== Reviews
+6. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
 
-1. [https://www.mdpi.com/2218-273X/12/4/546 Developments in Algorithms for Sequence Alignment]: A Review. Biomolecules. 2022
+7. [https://doi.org/10.1093/bioinformatics/btac658 *WMSA*]: a novel method for multiple sequence alignment of DNA sequences. *Bioinformatics*. 2022 ([https://github.com/malabz/WMSA/ soft])
+
+
+== Review
+
+1. [https://www.mdpi.com/2218-273X/12/4/546 Developments in Algorithms for Sequence Alignment]: A Review. *Biomolecules*. 2022
+
+2. [https://doi.org/10.1093/bib/bbac069 A survey on the algorithm and development of multiple sequence alignment]. *Briefings in Bioinformatics*. 2022
+
 
 == under review papers
 
