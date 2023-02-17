@@ -1,0 +1,39 @@
+# jemdoc: menu{MENU}{papers.html}, nofooter
+= 发表论文
+
+== [http://lab.malab.cn/soft/halign HAlign]
+
+1. [https://academic.oup.com/bioinformatics/article/31/15/2475/188425 *HAlign*]: Fast multiple similar DNA/RNA sequence alignment based on the centre star strategy. *Bioinformatics*. 2015 ([https://github.com/malabz/HAlign soft])
+
+2. [https://link.springer.com/content/pdf/10.1186/s13015-017-0116-x.pdf *HAlign-II*]: efficient ultra-large multiple sequence alignment and phylogenetic tree reconstruction with distributed and parallel computing. *Algorithms for Molecular Biology*. 2017 ([https://github.com/malabz/HAlign soft])
+
+3. [https://doi.org/10.1093/molbev/msac166 *HAlign-III*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
+
+
+== MSA
+
+1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*]: a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
+
+2. [https://link.springer.com/article/10.1186/s12918-017-0476-3 Reconstructing evolutionary trees in parallel for massive sequences]. *BMC Systems Biology*. 2017
+
+3. [https://www.liebertpub.com/doi/10.1089/cmb.2017.0040 Multiple Sequence Alignment Based on a Suffix Tree and Center-Star Strategy]: A Linear Method for Multiple Nucleotide Sequence Alignment on Spark Parallel Framework. *Journal of Computational Biology*. 2017 ([https://github.com/suwenhecn/MASC soft])
+
+4. [http://www.jgenetgenomics.org/en/article/doi/10.1016/j.jgg.2018.07.004 *VCSRA*]: A fast and accurate multiple sequence alignment algorithm with a high degree of parallelism. *Journal of Genetics and Genomics*. 2018 ([https://github.com/DongDongNeophyte/VCSRA_code soft])
+
+5. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. *Briefings in Bioinformatics*. 2021
+
+6. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
+
+7. [https://doi.org/10.1093/bioinformatics/btac658 *WMSA*]: a novel method for multiple sequence alignment of DNA sequences. *Bioinformatics*. 2022 ([https://github.com/malabz/WMSA/ soft])
+
+
+== Review
+
+1. [https://www.mdpi.com/2218-273X/12/4/546 Developments in Algorithms for Sequence Alignment]: A Review. *Biomolecules*. 2022
+
+2. [https://doi.org/10.1093/bib/bbac069 A survey on the algorithm and development of multiple sequence alignment]. *Briefings in Bioinformatics*. 2022
+
+
+== under review papers
+
+1. *MACF*: A fast method for multiple nucleotide sequence alignment based on clustering and the FM index ([https://github.com/malabz/MACF soft])

@@ -39,12 +39,12 @@ body {
 	background: white;
 	text-align: left;
 	vertical-align: top;
-	min-width: 40em;
-	width: 50em;
+	/* min-width: 40em; */
+	width: auto;
 }
 
 #layout-menu a {
-	line-height: 1.5em;
+	line-height: 1.6em;
 	margin-left: 0.6em;
 }
 
