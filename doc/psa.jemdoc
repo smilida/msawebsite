@@ -1,7 +1,7 @@
 # jemdoc: menu{MENU}{psa.html}, nofooter
 = 双序列比对
 
-双序列比对的基本算法主要有*动态规划*、*后缀树*和*傅里叶变换算法*等。
+双序列比对的基本算法主要有*动态规划*、*后缀树*和*傅里叶变换算法*等。此外还有profile比对。
 
 == 动态规划
 
@@ -125,7 +125,7 @@ c[i-1,j]-egap
 
 [https://github.com/Guuhua/PSA/blob/main/python/PSA_Kband.py Python] [https://github.com/Guuhua/PSA/blob/main/java/Kband.java Java] [https://github.com/Guuhua/PSA/blob/main/c/PSA_kband.c C]
 
-== 基于同源区段对齐的比对
+== 基于同源区段对齐的双序列比对
 
 基于同源区段对齐的比对是先将一条序列进行快速索引，通过快速索引可快速遍历得到两条序列之间的同源区段。选出合适的同源区段，并将其对齐，剩下未对齐的序列采用动态规划的方法对齐，最后将所有对齐的片段拼接起来，得到最终结果。
 
@@ -140,3 +140,10 @@ c[i-1,j]-egap
 
 - 基于后缀树的比对 [https://github.com/Guuhua/PSA/blob/main/python/PSA_STree.py Python] [https://github.com/Guuhua/PSA/blob/main/java/STAlign.java Java]
 - 基于FM-index的比对 [https://github.com/Guuhua/PSA/blob/main/java/FMAlign.java Java] [https://github.com/Guuhua/PSA/blob/main/c/PSA_fmindex.c C]
+
+
+== profile比对
+
+== 比对实现
+
+- [https://github.com/Guuhua/profileAlignment Java]
