@@ -1,0 +1,26 @@
+# jemdoc: menu{MENU}{modules.html}, nofooter
+= 实用开发模块
+
+== [https://github.com/lh3 @lh3] 的序列读取模块
+
+=== 介绍：
+一个读取 fasta 和 fastq 文件格式的模块，读取速度和效率较佳。
+
+=== 用法：
+参考 [https://github.com/malabz/kseq/blob/main/fileread.c 这个文件]
+
+=== 项目路径
+[https://github.com/malabz/kseq 项目路径]
+
+== 并行后缀数组
+
+=== 介绍：
+部分后缀数组方法（如 DC3 等）采用基数排序完成，由于基数排序并行较为容易，因此有一些开发并行基数排序以实现并行后缀数组的方法。本项目进行了部分整理。
+
+注意：由于 Cilk 已经被 [https://gcc.gnu.org/gcc-7/changes.html gcc-7] 弃用，因此采用 OpenMP 进行并行，代码中对于 OpenMP 的支持不足。
+
+=== 用法：
+参考 [https://github.com/malabz/parallel-suffixArray\#usage usage]
+
+=== 项目路径
+[https://github.com/malabz/parallel-suffixArray 项目路径]

@@ -15,7 +15,7 @@ jemdoc is a light text-based markup language designed for creating websites. It 
    ```shell
    # python3
    
-   # for signle file
+   # for single file
    $ python jemdoc -c mysite.conf -o html/ ./doc/***.jemdoc
    # for all files
    $ python jemdoc -c mysite.conf -o html/ ./doc/*.jemdoc
