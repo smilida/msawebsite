@@ -53,8 +53,8 @@
 - [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW Dataset Link]
 
 == 猴痘数据集
-- 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230~210919 之间，平均长度 197103
-- 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4072 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17~228869 之间，平均长度 175611
+- 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230\~210919 之间，平均长度 197103
+- 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4072 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17\~228869 之间，平均长度 175611
 - 最后更新日期：2023-03-16
 - [https://github.com/malabz/MPoxVR_dataset Dataset Mainpage]
 - [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230316 Dataset Link]
