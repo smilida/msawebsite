@@ -48,8 +48,8 @@ Total column(TC) score is the number of correctly aligned columns divided by the
 \(TC = \frac{{\sum\nolimits_{k = 0}^L {match(tes{t_k},ref)} }}{{re{f_{upper}}}}\)
 
 其中：
-- $re{f_{upper}}$是ref文件总全部都是大写字母的列数
-- ${match(tes{t_k},ref)}$是在test文件中完全匹配(大写且相同)
+- $re{f_{upper}}$是ref文件中包含大写字母的列数
+- ${match(tes{t_k},ref)}$是在test文件中完全匹配(大写且相同)的列数
 
 === 参考内容
 . Edgar, Robert C. “MUSCLE: multiple sequence alignment with high accuracy and high throughput.” Nucleic acids research vol. 32,5 1792-7. 19 Mar. 2004, doi:10.1093/nar/gkh340

@@ -27,6 +27,9 @@
 - 新冠病毒基因序列，总共13w条，相似度较高，长度大于29000bp
     (序列已对齐，对比前请去除'-')
 - [http://lab.malab.cn/~cjt/MSA/data/msa_1012.tar-2.xz]
+- 新冠病毒基因序列，总共1M条，相似度较高，长度大于29000bp
+    (序列已对齐，对比前请去除'-')
+- [http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_1Mseq.tar.xz]
 - 新冠病毒基因序列，总共24310条，相似度较高，长度大于29000bp
 - [http://lab.malab.cn/~cjt/MSA/data/SARS-CoV-2.7z]
 
@@ -34,6 +37,7 @@
 
 - 含二级结构，NEXUS格式，相似度很高
 - [https://kim.bio.upenn.edu/software/csd.shtml]
+- 下载 (zipped file): [http://lab.malab.cn/soft/WMSA2/data/RNA-255.zip RNA-255] [http://lab.malab.cn/soft/WMSA2/data/RNA-511.zip RNA-511] [http://lab.malab.cn/soft/WMSA2/data/RNA-1023.zip RNA-1023] [http://lab.malab.cn/soft/WMSA2/data/RNA-2047.zip RNA-2047] [http://lab.malab.cn/soft/WMSA2/data/RNA-4095.zip RNA-4095] [http://lab.malab.cn/soft/WMSA2/data/RNA-8191.zip RNA-8191]
 
 == 模拟noncoding数据
 
@@ -51,3 +55,17 @@
 - 相似度较低，序列长度短(<100bp)，文件内序列数量多(最多415519条)，有金标准对齐，fasta格式，蛋白质数据集
 - 金标准对比结果同样采用 [https://github.com/rcedgar/qscore Q Score 程序]
 - [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW Dataset Link]
+
+== 猴痘数据集
+- 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230\~210919 之间，平均长度 197103
+- 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4072 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17\~228869 之间，平均长度 175611
+- 最后更新日期：2023-03-16
+- [https://github.com/malabz/MPoxVR_dataset Dataset Mainpage]
+- [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230316 Dataset Link]
+
+== QuanTest2 数据集
+
+- 蛋白质数据集，相似度较低
+- Ref: Sievers, F. et al. (2020) QuanTest2: benchmarking multiple sequence alignments using secondary structure prediction, Bioinformatics, 36(1), January 2020, 90–95.
+- 原版利用二级结构进行预测，[http://bioinf.ucd.ie/quantest2.tar 下载地址]
+- 利用 Q Score 和 TC Score 进行得分计算，[https://github.com/malabz/QuanTest2 Dataset Mainpage]
