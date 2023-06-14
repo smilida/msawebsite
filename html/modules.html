@@ -5,8 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>实用开发模块
-</title>
+<title>实用开发模块</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -22,61 +21,41 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">序列比对</div>
-<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="index.html">首页</a></div>
 <div class="menu-item"><a href="psa.html">双序列比对</a></div>
 <div class="menu-item"><a href="msa.html">多序列比对</a></div>
 <div class="menu-item"><a href="measure.html">评分标准</a></div>
-<div class="menu-item"><a href="msaligners.html">序列比对器</a></div>
 <div class="menu-item"><a href="tools.html">实用工具</a></div>
 <div class="menu-item"><a href="modules.html" class="current">实用开发模块</a></div>
 <div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
 <div class="menu-item"><a href="papers.html">发表论文</a></div>
 <div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>实用开发模块
-</h1>
-<div id="subtitle">
+<h1>实用开发模块</h1>
 </div>
-</div>
-<h2><a href="https://github.com/lh3" target=&ldquo;blank&rdquo;>@lh3</a> 的序列读取模块
-</h2>
-<p>
-</p>
-<h3>介绍：
-</h3>
+<h2><a href="https://github.com/lh3" target=&ldquo;blank&rdquo;>@lh3</a> 的序列读取模块</h2>
+<h3>介绍：</h3>
 <p>一个读取 fasta 和 fastq 文件格式的模块，读取速度和效率较佳。
-
 </p>
-<h3>用法：
-</h3>
+<h3>用法：</h3>
 <p>参考 <a href="https://github.com/malabz/kseq/blob/main/fileread.c" target=&ldquo;blank&rdquo;>这个文件</a>
-
 </p>
-<h3>项目路径
-</h3>
+<h3>项目路径</h3>
 <p><a href="https://github.com/malabz/kseq" target=&ldquo;blank&rdquo;>项目路径</a>
-
 </p>
-<h2>并行后缀数组
-</h2>
-<p>
-</p>
-<h3>介绍：
-</h3>
+<h2>并行后缀数组</h2>
+<h3>介绍：</h3>
 <p>部分后缀数组方法（如 DC3 等）采用基数排序完成，由于基数排序并行较为容易，因此有一些开发并行基数排序以实现并行后缀数组的方法。本项目进行了部分整理。
-
-注意：由于 Cilk 已经被 <a href="https://gcc.gnu.org/gcc-7/changes.html" target=&ldquo;blank&rdquo;>gcc-7</a> 弃用，因此采用 OpenMP 进行并行，代码中对于 OpenMP 的支持不足。
-
 </p>
-<h3>用法：
-</h3>
+<p>注意：由于 Cilk 已经被 <a href="https://gcc.gnu.org/gcc-7/changes.html" target=&ldquo;blank&rdquo;>gcc-7</a> 弃用，因此采用 OpenMP 进行并行，代码中对于 OpenMP 的支持不足。
+</p>
+<h3>用法：</h3>
 <p>参考 <a href="https://github.com/malabz/parallel-suffixArray#usage" target=&ldquo;blank&rdquo;>usage</a>
-
 </p>
-<h3>项目路径
-</h3>
+<h3>项目路径</h3>
 <p><a href="https://github.com/malabz/parallel-suffixArray" target=&ldquo;blank&rdquo;>项目路径</a></p>
 </td>
 </tr>

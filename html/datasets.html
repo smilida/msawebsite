@@ -21,14 +21,14 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">序列比对</div>
-<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="index.html">首页</a></div>
 <div class="menu-item"><a href="psa.html">双序列比对</a></div>
 <div class="menu-item"><a href="msa.html">多序列比对</a></div>
 <div class="menu-item"><a href="measure.html">评分标准</a></div>
-<div class="menu-item"><a href="msaligners.html">序列比对器</a></div>
 <div class="menu-item"><a href="tools.html">实用工具</a></div>
 <div class="menu-item"><a href="modules.html">实用开发模块</a></div>
 <div class="menu-item"><a href="datasets.html" class="current">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html" class="current">生成模拟数据</a></div>
 <div class="menu-item"><a href="papers.html">发表论文</a></div>
 <div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
 </td>
@@ -36,7 +36,20 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1>测试数据集</h1>
 </div>
-<h2>mitochondrial genomes</h2>
+<h2>DNA/RNA真实数据集</h2>
+<h3>Ancient human partial mitochondrial DNA</h3>
+<ul>
+<li><p>古代人类线粒体高可变区I和高可变区II的基因序列，长度350bp左右，293条高可变区I，100条高可变区II，数据集混在一起，比对时需要分开使用 
+</p>
+</li>
+<li><p>Ref: Ancient DNA Reveals Key Stages in the Formation of Central European Mitochondrial Genetic Diversity. DOI: 10.1126/science.1241844
+</p>
+</li>
+<li><p>下载 (zipped file): <a href="http://lab.malab.cn/soft/WMSA2/data/mt.zip" target=&ldquo;blank&rdquo;>mt.zip</a>
+</p>
+</li>
+</ul>
+<h3>mitochondrial genomes</h3>
 <ul>
 <li><p>人类线粒体基因组，672条高度相似的DNA序列，最大长度16579bp
 </p>
@@ -44,11 +57,11 @@ MathJax.Hub.Config({
 <li><p>Ref: Tanaka M., et al. (2004) Mitochondrial genome variation in eastern Asia and the peopling of Japan. Genome Res,14(10a), 1832-1850.
 </p>
 </li>
-<li><p>下载 (zipped file): <a href="http://lab.malab.cn/soft/halign/data/mt1x.zip" target=&ldquo;blank&rdquo;>1x</a> (219KB)   <a href="http://lab.malab.cn/soft/halign/data/mt20x.zip" target=&ldquo;blank&rdquo;>20x</a> (4.27MB)  <a href="http://lab.malab.cn/soft/halign/data/mt50x.zip" target=&ldquo;blank&rdquo;>50x</a> (10.666MB)  <a href="http://lab.malab.cn/soft/halign/data/mt100x.zip" target=&ldquo;blank&rdquo;>100x</a> (21.325MB)
+<li><p>Download: <a href="http://lab.malab.cn/soft/halign/data/mt1x.zip" target=&ldquo;blank&rdquo;>1x</a> (219KB)   <a href="http://lab.malab.cn/soft/halign/data/mt20x.zip" target=&ldquo;blank&rdquo;>20x</a> (4.27MB)  <a href="http://lab.malab.cn/soft/halign/data/mt50x.zip" target=&ldquo;blank&rdquo;>50x</a> (10.666MB)  <a href="http://lab.malab.cn/soft/halign/data/mt100x.zip" target=&ldquo;blank&rdquo;>100x</a> (21.325MB)
 </p>
 </li>
 </ul>
-<h2>Human Genome</h2>
+<h3>Human Genome</h3>
 <ul>
 <li><p>人类基因组基因，含有21个人的完整基因。因数据量过大，仅提供基因组的下载链接。
 </p>
@@ -57,7 +70,7 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h2>16s rRNA</h2>
+<h3>16S rRNA</h3>
 <ul>
 <li><p>16S rRNA基因是细菌上编码rRNA相对应的DNA序列，相似度不高，最大长度1586bp
 </p>
@@ -65,11 +78,20 @@ MathJax.Hub.Config({
 <li><p>Ref: DeSantis, T. Z., et al.(2006) NAST: a multiple sequence alignment server for comparative analysis of 16S rRNA genes. Nucleic Acids Res, 34, W394-399.
 </p>
 </li>
-<li><p>下载 (zipped file): <a href="http://lab.malab.cn/soft/halign/data/16ssmall.zip" target=&ldquo;blank&rdquo;>small</a> (21.864MB)  <a href="http://lab.malab.cn/soft/halign/data/16sbig.zip" target=&ldquo;blank&rdquo;>big</a> (197.224MB)
+<li><p>Download: <a href="http://lab.malab.cn/soft/halign/data/16ssmall.zip" target=&ldquo;blank&rdquo;>small</a> (21.864MB)  <a href="http://lab.malab.cn/soft/halign/data/16sbig.zip" target=&ldquo;blank&rdquo;>big</a> (197.224MB)
 </p>
 </li>
 </ul>
-<h2>COVID-19</h2>
+<h3>Mycobacterium 23S rRNA sequences</h3>
+<ul>
+<li><p>641 Mycobacterium 23S rRNA sequences with lengths ranging from 1909 to 3485 bp were downloaded as another dataset from the <a href="http://www.arb-silva.de/" target=&ldquo;blank&rdquo;>SILVA rRNA database</a> of Bacteria, Archaea and Eukarya.
+</p>
+</li>
+<li><p>Download: <a href="http://lab.malab.cn/%7Etfr/HAlign3_testdata/23s_rRNA.tar.xz" target=&ldquo;blank&rdquo;>23s_rRNA.tar.xz</a>
+</p>
+</li>
+</ul>
+<h3>COVID-19</h3>
 <ul>
 <li><p>新冠病毒基因序列，总共156条，相似度较高，长度大于29000bp
 </p>
@@ -104,55 +126,7 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h2>RNA模拟数据</h2>
-<ul>
-<li><p>含二级结构，NEXUS格式，相似度很高
-</p>
-</li>
-<li><p><a href="https://kim.bio.upenn.edu/software/csd.shtml" target=&ldquo;blank&rdquo;>https://kim.bio.upenn.edu/software/csd.shtml</a>
-</p>
-</li>
-<li><p>下载 (zipped file): <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-255.zip" target=&ldquo;blank&rdquo;>RNA-255</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-511.zip" target=&ldquo;blank&rdquo;>RNA-511</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-1023.zip" target=&ldquo;blank&rdquo;>RNA-1023</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-2047.zip" target=&ldquo;blank&rdquo;>RNA-2047</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-4095.zip" target=&ldquo;blank&rdquo;>RNA-4095</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-8191.zip" target=&ldquo;blank&rdquo;>RNA-8191</a>
-</p>
-</li>
-</ul>
-<h2>模拟noncoding数据</h2>
-<ul>
-<li><p>相似度较低，有较多类型的数据，fasta格式
-</p>
-</li>
-<li><p><a href="http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html" target=&ldquo;blank&rdquo;>http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html</a>
-</p>
-</li>
-</ul>
-<h2>MUSCLE 数据集</h2>
-<ul>
-<li><p>相似度较低，有较多类型的数据，fasta格式，以蛋白质数据集为主
-</p>
-</li>
-<li><p><a href="http://www.drive5.com/bench/" target=&ldquo;blank&rdquo;>http://www.drive5.com/bench/</a>
-</p>
-</li>
-<li><p><a href="https://github.com/rcedgar/balifam" target=&ldquo;blank&rdquo;>https://github.com/rcedgar/balifam</a>
-</p>
-</li>
-<li><p><a href="https://github.com/rcedgar/qscore" target=&ldquo;blank&rdquo;>Q Score 程序</a>
-</p>
-</li>
-</ul>
-<h2>extHomFam 数据集</h2>
-<ul>
-<li><p>相似度较低，序列长度短(&lt;100bp)，文件内序列数量多(最多415519条)，有金标准对齐，fasta格式，蛋白质数据集
-</p>
-</li>
-<li><p>金标准对比结果同样采用 <a href="https://github.com/rcedgar/qscore" target=&ldquo;blank&rdquo;>Q Score 程序</a>
-</p>
-</li>
-<li><p><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW" target=&ldquo;blank&rdquo;>Dataset Link</a>
-</p>
-</li>
-</ul>
-<h2>猴痘数据集</h2>
+<h3>猴痘数据集</h3>
 <ul>
 <li><p>完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230~210919 之间，平均长度 197103
 </p>
@@ -170,7 +144,81 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h2>QuanTest2 数据集</h2>
+<h2>DNA/RNA模拟数据集</h2>
+<h3>Hierarchical tree simulated datasets</h3>
+<ul>
+<li><p>Ref: <a href="https://doi.org/10.1093/molbev/msac166" target=&ldquo;blank&rdquo;>HAlign 3</a>: Fast Multiple Alignment of Ultra-Large Numbers of Similar DNA/RNA Sequences.
+</p>
+</li>
+<li><p>Download: <a href="http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_like_diff_similarity.tar.xz" target=&ldquo;blank&rdquo;>sars_cov_2_like_diff_similarity.tar.xz</a>, <a href="http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_like_diff_treelength.tar.xz" target=&ldquo;blank&rdquo;>sars_cov_2_like_diff_treelength.tar.xz</a>, <a href="http://lab.malab.cn/~tfr/HAlign3_testdata/mt_like_diff_similarity.tar.xz" target=&ldquo;blank&rdquo;>mt_like_diff_similarity.tar.xz</a>, <a href="http://lab.malab.cn/~tfr/HAlign3_testdata/mt_like_diff_treelength.tar.xz" target=&ldquo;blank&rdquo;>mt_like_diff_treelength.tar.xz</a>
+</p>
+</li>
+<li><p><a href="simu_datasets.html" target=&ldquo;blank&rdquo;>使用IQTree和INDELible生成方法</a>
+</p>
+</li>
+</ul>
+<h3>Star-tree simulated datasets</h3>
+<ul>
+<li><p>14 simulated datasets, each dataset contained 1000 sequences in each dataset with different similarities (99%, 98%, 97%, 96%, 95%, 94%, 93%, 92%, 91%, 90%, 85%, 80%, 70%, and 60%).
+</p>
+</li>
+<li><p>Ref: <a href="https://doi.org/10.1093/molbev/msac166" target=&ldquo;blank&rdquo;>HAlign 3</a>: Fast Multiple Alignment of Ultra-Large Numbers of Similar DNA/RNA Sequences.
+</p>
+</li>
+<li><p>Download: <a href="http://lab.malab.cn/%7Etfr/HAlign3_testdata/star_simudata_1000seq.tar.xz" target=&ldquo;blank&rdquo;>star_simudata_1000seq.tar.xz</a>
+</p>
+</li>
+</ul>
+<h3>RNA模拟数据</h3>
+<ul>
+<li><p>含二级结构，NEXUS格式，相似度很高
+</p>
+</li>
+<li><p><a href="https://kim.bio.upenn.edu/software/csd.shtml" target=&ldquo;blank&rdquo;>https://kim.bio.upenn.edu/software/csd.shtml</a>
+</p>
+</li>
+<li><p>下载 (zipped file): <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-255.zip" target=&ldquo;blank&rdquo;>RNA-255</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-511.zip" target=&ldquo;blank&rdquo;>RNA-511</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-1023.zip" target=&ldquo;blank&rdquo;>RNA-1023</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-2047.zip" target=&ldquo;blank&rdquo;>RNA-2047</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-4095.zip" target=&ldquo;blank&rdquo;>RNA-4095</a> <a href="http://lab.malab.cn/soft/WMSA2/data/RNA-8191.zip" target=&ldquo;blank&rdquo;>RNA-8191</a>
+</p>
+</li>
+</ul>
+<h3>模拟noncoding数据</h3>
+<ul>
+<li><p>相似度较低，有较多类型的数据，fasta格式
+</p>
+</li>
+<li><p><a href="http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html" target=&ldquo;blank&rdquo;>http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html</a>
+</p>
+</li>
+</ul>
+<h2>蛋白质数据集</h2>
+<h3>MUSCLE 数据集</h3>
+<ul>
+<li><p>相似度较低，有较多类型的数据，fasta格式，以蛋白质数据集为主
+</p>
+</li>
+<li><p><a href="http://www.drive5.com/bench/" target=&ldquo;blank&rdquo;>http://www.drive5.com/bench/</a>
+</p>
+</li>
+<li><p><a href="https://github.com/rcedgar/balifam" target=&ldquo;blank&rdquo;>https://github.com/rcedgar/balifam</a>
+</p>
+</li>
+<li><p><a href="https://github.com/rcedgar/qscore" target=&ldquo;blank&rdquo;>Q Score 程序</a>
+</p>
+</li>
+</ul>
+<h3>extHomFam 数据集</h3>
+<ul>
+<li><p>相似度较低，序列长度短(&lt;100bp)，文件内序列数量多(最多415519条)，有金标准对齐，fasta格式，蛋白质数据集
+</p>
+</li>
+<li><p>金标准对比结果同样采用 <a href="https://github.com/rcedgar/qscore" target=&ldquo;blank&rdquo;>Q Score 程序</a>
+</p>
+</li>
+<li><p><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW" target=&ldquo;blank&rdquo;>Dataset Link</a>
+</p>
+</li>
+</ul>
+<h3>QuanTest2 数据集</h3>
 <ul>
 <li><p>蛋白质数据集，相似度较低
 </p>

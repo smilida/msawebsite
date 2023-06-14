@@ -1,24 +1,37 @@
 # jemdoc: menu{MENU}{datasets.html}, nofooter
 = 测试数据集
 
-== mitochondrial genomes
+== DNA/RNA真实数据集
+
+=== Ancient human partial mitochondrial DNA
+
+- 古代人类线粒体高可变区I和高可变区II的基因序列，长度350bp左右，293条高可变区I，100条高可变区II，数据集混在一起，比对时需要分开使用 
+- Ref: Ancient DNA Reveals Key Stages in the Formation of Central European Mitochondrial Genetic Diversity. DOI: 10.1126/science.1241844
+- 下载 (zipped file): [http://lab.malab.cn/soft/WMSA2/data/mt.zip mt.zip]
+
+=== mitochondrial genomes
 
 - 人类线粒体基因组，672条高度相似的DNA序列，最大长度16579bp
 - Ref: Tanaka M., et al. (2004) Mitochondrial genome variation in eastern Asia and the peopling of Japan. Genome Res,14(10a), 1832-1850.
-- 下载 (zipped file): [http://lab.malab.cn/soft/halign/data/mt1x.zip 1x] (219KB)   [http://lab.malab.cn/soft/halign/data/mt20x.zip 20x] (4.27MB)  [http://lab.malab.cn/soft/halign/data/mt50x.zip 50x] (10.666MB)  [http://lab.malab.cn/soft/halign/data/mt100x.zip 100x] (21.325MB)
+- Download: [http://lab.malab.cn/soft/halign/data/mt1x.zip 1x] (219KB)   [http://lab.malab.cn/soft/halign/data/mt20x.zip 20x] (4.27MB)  [http://lab.malab.cn/soft/halign/data/mt50x.zip 50x] (10.666MB)  [http://lab.malab.cn/soft/halign/data/mt100x.zip 100x] (21.325MB)
 
-== Human Genome
+=== Human Genome
 
 - 人类基因组基因，含有21个人的完整基因。因数据量过大，仅提供基因组的下载链接。
 - [http://lab.malab.cn/~cjt/MSA/data/Human_Genome_21.html link]
 
-== 16s rRNA
+=== 16S rRNA
 
 - 16S rRNA基因是细菌上编码rRNA相对应的DNA序列，相似度不高，最大长度1586bp
 - Ref: DeSantis, T. Z., et al.(2006) NAST: a multiple sequence alignment server for comparative analysis of 16S rRNA genes. Nucleic Acids Res, 34, W394-399.
-- 下载 (zipped file): [http://lab.malab.cn/soft/halign/data/16ssmall.zip small] (21.864MB)  [http://lab.malab.cn/soft/halign/data/16sbig.zip big] (197.224MB)
+- Download: [http://lab.malab.cn/soft/halign/data/16ssmall.zip small] (21.864MB)  [http://lab.malab.cn/soft/halign/data/16sbig.zip big] (197.224MB)
 
-== COVID-19
+=== Mycobacterium 23S rRNA sequences
+
+- 641 Mycobacterium 23S rRNA sequences with lengths ranging from 1909 to 3485 bp were downloaded as another dataset from the [http://www.arb-silva.de/ SILVA rRNA database] of Bacteria, Archaea and Eukarya.
+- Download: [http://lab.malab.cn/%7Etfr/HAlign3_testdata/23s_rRNA.tar.xz 23s\_rRNA.tar.xz]
+
+=== COVID-19
 
 - 新冠病毒基因序列，总共156条，相似度较高，长度大于29000bp
 - [http://lab.malab.cn/~zsl/Periodical_results/data/2019nCoVR_20200301.zip]
@@ -33,37 +46,55 @@
 - 新冠病毒基因序列，总共24310条，相似度较高，长度大于29000bp
 - [http://lab.malab.cn/~cjt/MSA/data/SARS-CoV-2.7z]
 
-== RNA模拟数据
+=== 猴痘数据集
 
-- 含二级结构，NEXUS格式，相似度很高
-- [https://kim.bio.upenn.edu/software/csd.shtml]
-- 下载 (zipped file): [http://lab.malab.cn/soft/WMSA2/data/RNA-255.zip RNA-255] [http://lab.malab.cn/soft/WMSA2/data/RNA-511.zip RNA-511] [http://lab.malab.cn/soft/WMSA2/data/RNA-1023.zip RNA-1023] [http://lab.malab.cn/soft/WMSA2/data/RNA-2047.zip RNA-2047] [http://lab.malab.cn/soft/WMSA2/data/RNA-4095.zip RNA-4095] [http://lab.malab.cn/soft/WMSA2/data/RNA-8191.zip RNA-8191]
-
-== 模拟noncoding数据
-
-- 相似度较低，有较多类型的数据，fasta格式
-- [http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html]
-
-== MUSCLE 数据集
-
-- 相似度较低，有较多类型的数据，fasta格式，以蛋白质数据集为主
-- [http://www.drive5.com/bench/]
-- [https://github.com/rcedgar/balifam]
-- [https://github.com/rcedgar/qscore Q Score 程序]
-
-== extHomFam 数据集
-- 相似度较低，序列长度短(<100bp)，文件内序列数量多(最多415519条)，有金标准对齐，fasta格式，蛋白质数据集
-- 金标准对比结果同样采用 [https://github.com/rcedgar/qscore Q Score 程序]
-- [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW Dataset Link]
-
-== 猴痘数据集
 - 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230\~210919 之间，平均长度 197103
 - 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4072 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17\~228869 之间，平均长度 175611
 - 最后更新日期：2023-03-16
 - [https://github.com/malabz/MPoxVR_dataset Dataset Mainpage]
 - [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230316 Dataset Link]
 
-== QuanTest2 数据集
+== DNA/RNA模拟数据集
+
+=== Hierarchical tree simulated datasets
+
+- Ref: [https://doi.org/10.1093/molbev/msac166 HAlign 3]: Fast Multiple Alignment of Ultra-Large Numbers of Similar DNA/RNA Sequences.
+- Download: [http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_like_diff_similarity.tar.xz sars\_cov\_2\_like\_diff\_similarity.tar.xz], [http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_like_diff_treelength.tar.xz sars\_cov\_2\_like\_diff\_treelength.tar.xz], [http://lab.malab.cn/~tfr/HAlign3_testdata/mt_like_diff_similarity.tar.xz mt\_like\_diff\_similarity.tar.xz], [http://lab.malab.cn/~tfr/HAlign3_testdata/mt_like_diff_treelength.tar.xz mt\_like\_diff\_treelength.tar.xz]
+- [simu_datasets.html 使用IQTree和INDELible生成方法]
+
+=== Star-tree simulated datasets
+
+- 14 simulated datasets, each dataset contained 1000 sequences in each dataset with different similarities (99\%, 98\%, 97\%, 96\%, 95\%, 94\%, 93\%, 92\%, 91\%, 90\%, 85\%, 80\%, 70\%, and 60\%).
+- Ref: [https://doi.org/10.1093/molbev/msac166 HAlign 3]: Fast Multiple Alignment of Ultra-Large Numbers of Similar DNA/RNA Sequences.
+- Download: [http://lab.malab.cn/%7Etfr/HAlign3_testdata/star_simudata_1000seq.tar.xz star\_simudata\_1000seq.tar.xz]
+
+=== RNA模拟数据
+
+- 含二级结构，NEXUS格式，相似度很高
+- [https://kim.bio.upenn.edu/software/csd.shtml]
+- 下载 (zipped file): [http://lab.malab.cn/soft/WMSA2/data/RNA-255.zip RNA-255] [http://lab.malab.cn/soft/WMSA2/data/RNA-511.zip RNA-511] [http://lab.malab.cn/soft/WMSA2/data/RNA-1023.zip RNA-1023] [http://lab.malab.cn/soft/WMSA2/data/RNA-2047.zip RNA-2047] [http://lab.malab.cn/soft/WMSA2/data/RNA-4095.zip RNA-4095] [http://lab.malab.cn/soft/WMSA2/data/RNA-8191.zip RNA-8191]
+
+=== 模拟noncoding数据
+
+- 相似度较低，有较多类型的数据，fasta格式
+- [http://bioinfolab.unl.edu/~cstrope/iSG/benchmark/index.html]
+
+== 蛋白质数据集
+
+=== MUSCLE 数据集
+
+- 相似度较低，有较多类型的数据，fasta格式，以蛋白质数据集为主
+- [http://www.drive5.com/bench/]
+- [https://github.com/rcedgar/balifam]
+- [https://github.com/rcedgar/qscore Q Score 程序]
+
+=== extHomFam 数据集
+
+- 相似度较低，序列长度短(<100bp)，文件内序列数量多(最多415519条)，有金标准对齐，fasta格式，蛋白质数据集
+- 金标准对比结果同样采用 [https://github.com/rcedgar/qscore Q Score 程序]
+- [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BO2SVW Dataset Link]
+
+=== QuanTest2 数据集
 
 - 蛋白质数据集，相似度较低
 - Ref: Sievers, F. et al. (2020) QuanTest2: benchmarking multiple sequence alignments using secondary structure prediction, Bioinformatics, 36(1), January 2020, 90–95.
