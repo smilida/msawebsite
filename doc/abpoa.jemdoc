@@ -1,0 +1,63 @@
+# jemdoc: menu{MENU}{abpoa.html}, nofooter
+= abPOA
+
+abPOA 实现了偏序图比对，并采用了 K-band + SIMD 优化。支持蛋白质、DNA、RNA 序列。
+
+== 安装
+
+=== 推荐使用 conda 进行配置
+
+~~~
+{conda 配置}{pyint}
+# 下载编译好的程序
+$ conda install -c wym6912 -c conda-forge abpoa
+~~~
+
+=== Linux 系统
+
+~~~
+{安装示例：}{pyint}
+# 下载源代码
+$ wget https://github.com/malabz/abPOA/releases/download/v1.4.1.1/abPOA-v1.4.1.1.tar.gz
+
+# 解压
+$ tar -xvf abPOA-v1.4.1.1.tar.gz
+
+# 进入目录
+$ cd abPOA-v1.4.1.1/
+
+# 编译
+$ make -j16
+
+# 安装
+$ sudo cp bin/abpoa /usr/bin/
+~~~
+
+=== Windows 系统
+
+下载 [https://github.com/malabz/abPOA/releases/download/v1.4.1.1/abPOA-v1.4.1.1.tar.gz 压缩包] 并使用压缩包管理器软件解压。
+
+接下来在 Visual Studio 2022 上编译程序并使用：打开 abpoa.sln ，接下来选择 Build -> Build Solution 。打开 x64\Debug 文件夹，获得 abpoa.exe 。若要生成正式版，需要在“属性”处选择 Release 模式。接下来， 选择 Properties -> Configuration Properties ，选择 Configuration Manager... 按钮，修改 Active Solution 为 Release。重新编译，在 x64\Release 文件夹下获得 abpoa.exe。
+
+
+== 使用
+~~~
+{}{}
+# 利用 POA 进行偏序比对
+$ abpoa mt1x.fasta -r 1 > mt1x.ans.fasta
+# 比对蛋白质序列
+$ abpoa protein.fasta -r 1 -c > protein.ans.fasta
+# 生成共识序列
+$ abpoa mt1x.fasta -r 0 > mt1x.abpoa.center.fasta
+
+# 详细使用方法
+$ abpoa --help
+~~~
+
+== 参考内容
+· Lee, C., Grasso, C., & Sharlow, M. F. (2002). Multiple sequence alignment using partial order graphs. Bioinformatics, 18(3), 452-464.
+
+· Lee, C. (2003). Generating consensus sequences from partial order multiple sequence alignment graphs. Bioinformatics, 19(8), 999-1008.
+
+· Gao, Y., Liu, Y., Ma, Y., Liu, B., Wang, Y., & Xing, Y. (2021). abPOA: an SIMD-based C library for fast partial order alignment using adaptive band. Bioinformatics, 37(15), 2209-2211.
+
