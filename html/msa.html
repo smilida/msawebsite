@@ -163,6 +163,56 @@ S4 ACTGACC
     S3:ATCTTC--TT
     S4:ACTGACC---
 </pre></div></div>
+<h2>偏序图比对 （Partial Order Multiple Sequence Alignment, PO-MSA/POA）</h2>
+<h3>多序列的有向无环图表示</h3>
+<p>在 POA 中，首先将每个序列的每个碱基/氨基酸视为一个结点。其次，为了进一步简化 MSA 的表示形式，将原始 MSA 同一列相同/相匹配的结点合并表示。最后，依照节点之间的位置（偏序）关系生成有向边，形成有向无环图（DAG）。
+</p>
+<p>将下述两条序列利用 DAG 表示：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+CCGCTTTTCCGC
+CCGCAAAACCGC
+</pre></div></div>
+<p>两条序列的 DAG 如下：
+</p>
+<center>
+<img src="https://cdn.jsdelivr.net/gh/wym6912/PicBed@main/malab/poa-sample.png" width="40%">
+</center>
+<p>其中，边均为有向边，方向均为从左至右。
+</p>
+<h3>基于 POA 求解多序列比对并生成共识序列</h3>
+<p>共识序列指对于一个 MSA，可以代表 MSA 的大部分性质的序列。在中心星比对中，选取的中心序列被视作共识序列。在 POA 中，为了能更好地代表 MSA，需要生成一条序列作为共识序列。
+</p>
+<div class="infoblock">
+<div class="blocktitle">算法实现思路</div>
+<div class="blockcontent">
+<ol>
+<li><p>对于每条序列，利用动态规划与 DAG 进行比对，并合并到 DAG 上
+</p>
+</li>
+<li><p>比对完成后，将 DAG 转换成多序列比对结果
+</p>
+</li>
+<li><p>依据 DAG 的权重，通过最重束（heaviest bundle）求解最大似然路径。最大似然路径上的点构成共识序列
+</p>
+</li>
+</ol>
+</div></div>
+<h3>DAG 与序列的比对</h3>
+<p>下图展示了一个 DAG 与序列的比对。与序列-序列比对相似，偏序比对可以利用动态规划方法求解，但是需要注意每次比对时，更新矩阵单元的位置。
+</p>
+<center>
+<img src="https://cdn.jsdelivr.net/gh/wym6912/PicBed@main/malab/poa-dynamicprogramming.png" width="40%">
+</center>
+<h3>方法实现</h3>
+<p>前人实现了 K-band + SIMD 优化的偏序图比对：
+</p>
+<p>Ref: Gao, Y., Liu, Y., Ma, Y., Liu, B., Wang, Y., &amp; Xing, Y. (2021). abPOA: an SIMD-based C library for fast partial order alignment using adaptive band. Bioinformatics, 37(15), 2209-2211.
+</p>
+<p><a href="https://github.com/malabz/abPOA" target=&ldquo;blank&rdquo;>实现代码</a>
+<a href="abpoa.html" target=&ldquo;blank&rdquo;>使用方法</a>
+</p>
 </td>
 </tr>
 </table>
