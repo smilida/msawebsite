@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>abPOA</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>abPOA</h1>
+</div>
+<p>abPOA 实现了偏序图比对，并采用了 K-band + SIMD 优化。支持蛋白质、DNA、RNA 序列。
+</p>
+<h2>安装</h2>
+<h3>推荐使用 conda 进行配置</h3>
+<div class="codeblock">
+<div class="blocktitle">conda 配置</div>
+<div class="blockcontent"><pre>
+<span class = "comment"># 下载编译好的程序</span>
+$ conda install -c wym6912 -c conda-forge abpoa
+</pre></div></div>
+<h3>Linux 系统</h3>
+<div class="codeblock">
+<div class="blocktitle">安装示例：</div>
+<div class="blockcontent"><pre>
+<span class = "comment"># 下载源代码</span>
+$ wget https://github.com/malabz/abPOA/releases/download/v1.4.1.1/abPOA-v1.4.1.1.tar.gz
+
+<span class = "comment"># 解压</span>
+$ tar -xvf abPOA-v1.4.1.1.tar.gz
+
+<span class = "comment"># 进入目录</span>
+$ cd abPOA-v1.4.1.1/
+
+<span class = "comment"># 编译</span>
+$ make -j16
+
+<span class = "comment"># 安装</span>
+$ sudo cp bin/abpoa /usr/bin/
+</pre></div></div>
+<h3>Windows 系统</h3>
+<p>下载 <a href="https://github.com/malabz/abPOA/releases/download/v1.4.1.1/abPOA-v1.4.1.1.tar.gz" target=&ldquo;blank&rdquo;>压缩包</a> 并使用压缩包管理器软件解压。
+</p>
+<p>接下来在 Visual Studio 2022 上编译程序并使用：打开 abpoa.sln ，接下来选择 Build -&gt; Build Solution 。打开 x64\Debug 文件夹，获得 abpoa.exe 。若要生成正式版，需要在“属性”处选择 Release 模式。接下来， 选择 Properties -&gt; Configuration Properties ，选择 Configuration Manager&hellip; 按钮，修改 Active Solution 为 Release。重新编译，在 x64\Release 文件夹下获得 abpoa.exe。
+</p>
+<h2>使用</h2>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# 利用 POA 进行偏序比对
+$ abpoa mt1x.fasta -r 1 &gt; mt1x.ans.fasta
+# 比对蛋白质序列
+$ abpoa protein.fasta -r 1 -c &gt; protein.ans.fasta
+# 生成共识序列
+$ abpoa mt1x.fasta -r 0 &gt; mt1x.abpoa.center.fasta
+
+# 详细使用方法
+$ abpoa --help
+</pre></div></div>
+<h2>参考内容</h2>
+<p>· Lee, C., Grasso, C., &amp; Sharlow, M. F. (2002). Multiple sequence alignment using partial order graphs. Bioinformatics, 18(3), 452-464.
+</p>
+<p>· Lee, C. (2003). Generating consensus sequences from partial order multiple sequence alignment graphs. Bioinformatics, 19(8), 999-1008.
+</p>
+<p>· Gao, Y., Liu, Y., Ma, Y., Liu, B., Wang, Y., &amp; Xing, Y. (2021). abPOA: an SIMD-based C library for fast partial order alignment using adaptive band. Bioinformatics, 37(15), 2209-2211.
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
