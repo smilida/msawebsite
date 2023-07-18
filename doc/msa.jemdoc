@@ -1,21 +1,6 @@
 # jemdoc: menu{MENU}{msa.html}, nofooter
 = 多序列比对
 
-== SP measures
-
-Sum of pairs (SP) measures: Scoring a alignment based on pairwise alignments.
-
-\(
-SP\_score(\alpha)=\sum_{i<j} score(\alpha_{ij})
-\)
-
-
-计算方式分为两种（注：p(\-,\-)=0）:
-- 对多序列对齐中的每一列得分进行计算，最后相加
-- 对多序列对齐中的每一对PSA得分进行计算，最后相加
-
-
-
 == 星比对
 
 ~~~
