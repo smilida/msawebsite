@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="realignment.html" class="current">Realignment</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
+</div>
+<h2>Realignment in MSA tools</h2>
+<h3>MULTALIGN (1987)</h3>
+<h3>PRRP (1996)</h3>
+<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>LAGAN and Multi-LAGAN (2002)</a></h3>
+<ul>
+<li><p><a href="http://lagan.stanford.edu" target=&ldquo;blank&rdquo;>LAGAN's homepage</a> 
+</p>
+</li>
+</ul>
+<h3>MAFFT</h3>
+<h3>MUSCLE</h3>
+<h3>PROBCONS (2004)</h3>
+<h3>SIROA (2004)</h3>
+<h3>MSAID (2005)</h3>
+<h3>SPEM (2005)</h3>
+<h3>PRIME (2006)</h3>
+<ul>
+<li><p><a href="http://prime.cbrc.jp/" target=&ldquo;blank&rdquo;>The link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
+<ul>
+<li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>PRALINE™ (2008)</a></h3>
+<ul>
+<li><p><a href="https://www.ibi.vu.nl/programs/pralinewww/" target=&ldquo;blank&rdquo;>PRALINE's homepage</a> 
+</p>
+</li>
+</ul>
+<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
+<p>Its refinement follows:
+</p>
+<ol>
+<li><p>Construct a new guide tree utilizing a new distance matrix based on the MSA.
+</p>
+</li>
+<li><p>Remove an edge from the new guide tree to obtain two new subtrees.
+</p>
+</li>
+<li><p>Realign the sequences in each subtree.
+</p>
+</li>
+<li><p>Align the two profiles associated with the two subtrees to get a global MSA.
+</p>
+</li>
+</ol>
+<p>Until convergence.
+</p>
+<ul>
+<li><p>This method is the same as MUSCLE's refinement.
+</p>
+</li>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>MMSA (2012)</a></h3>
+<ul>
+<li><p><a href="http://ekhidna.biocenter.helsinki.fi/MMSA" target=&ldquo;blank&rdquo;>The link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3>FAMSA</h3>
+<h3><a href="https://www.nature.com/articles/srep41553" target=&ldquo;blank&rdquo;>QuickProbs2 (2017)</a></h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/8567458" target=&ldquo;blank&rdquo;>RLALIGN (2018)</a></h3>
+<h3>PRANK</h3>
+<h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Vertical partitioning realigners</a></h2>
+<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Horizontal partitioning realigners</a></h2>
+<h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -25,10 +25,11 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="psa.html">双序列比对</a></div>
 <div class="menu-item"><a href="msa.html" class="current">多序列比对</a></div>
 <div class="menu-item"><a href="measure.html">评分标准</a></div>
-<div class="menu-item"><a href="tools.html">实用工具</a></div>
-<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="realignment.html">Realignment</a></div>
 <div class="menu-item"><a href="datasets.html">测试数据集</a></div>
 <div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
 <div class="menu-item"><a href="papers.html">发表论文</a></div>
 <div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
 </td>
@@ -36,23 +37,6 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1>多序列比对</h1>
 </div>
-<h2>SP measures</h2>
-<p>Sum of pairs (SP) measures: Scoring a alignment based on pairwise alignments.
-</p>
-<p style="text-align:center">
-\[
-SP\_score(\alpha)=\sum_{i&lt;j} score(\alpha_{ij})
-\]
-</p><p>计算方式分为两种（注：p(-,-)=0）:
-</p>
-<ul>
-<li><p>对多序列对齐中的每一列得分进行计算，最后相加
-</p>
-</li>
-<li><p>对多序列对齐中的每一对PSA得分进行计算，最后相加
-</p>
-</li>
-</ul>
 <h2>星比对</h2>
 <div class="infoblock">
 <div class="blocktitle">算法实现思路</div>
@@ -177,7 +161,7 @@ CCGCAAAACCGC
 <p>两条序列的 DAG 如下：
 </p>
 <center>
-<img src="https://cdn.jsdelivr.net/gh/wym6912/PicBed@e3686a480b477cb1ccaefa897f47877f376ccada/malab/poa-sample.png" width="40%">
+<img src="https://cdn.jsdelivr.net/gh/wym6912/PicBed@e3686a480b477cb1ccaefa897f47877f376ccada/malab/poa-sample.png">
 </center>
 <p>其中，边均为有向边，方向均为从左至右。
 </p>

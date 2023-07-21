@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="realignment.html" class="current">Realignment</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
+</div>
+<h2>Vertical partitioning realigners</h2>
+<p>Cut the input sequences into substrings, and once these shorter substrings are realigned, they stitch their alignments together.
+</p>
+<h3>1. <a href="https://informatica.si/index.php/informatica/article/view/2621/0" target=&ldquo;blank&rdquo;>Refin-Align (2019)</a> </h3>
+<p>In each iteration:
+</p>
+<ol>
+<li><p>Extract the blocks from the  initial alignment based on the columns with the same bases.
+</p>
+</li>
+<li><p>Delete all gaps in each block and realign it with Promalign.
+</p>
+</li>
+<li><p>Calculate the SP score of the initial block and the new block.
+</p>
+</li>
+<li><p>If the score of the new one is higher than the initial, the new block will be the input of the next iteration.
+</p>
+</li>
+</ol>
+<p>Until no longer improve the SP score of each block. 
+</p>
+<ul>
+<li><p>Test data: Protein (BALIBASE, PREFAB, OXBENCH, HOMSTRAD)
+</p>
+</li>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3>2. <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0219720022400029" target=&ldquo;blank&rdquo;>RPfam (2022)</a></h3>
+<p>RPfam employs the Simulated Annealing algorithm in iteration.
+</p>
+<p>In each iteration:
+</p>
+<ol>
+<li><p>Scan the current MSA for badly aligned blocks and compute score of the blocks.
+</p>
+</li>
+<li><p>Randomly pick a badly aligned block.
+</p>
+</li>
+<li><p>Seek the worst aligned fragment in the block.
+</p>
+</li>
+<li><p>Realign the fragment utilizing DP algorithm.
+</p>
+</li>
+<li><p>Update the current MSA.
+</p>
+</li>
+</ol>
+<p>Until the temperature is down to the setting value the iteration ends.
+</p>
+<ul>
+<li><p>Test data: Protein (PFAM)
+</p>
+</li>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Horizontal partitioning realigners</a></h2>
+<h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
+<h2>[realign<u>in</u>msa.html Realignment in MSA tools</h2>
+</td>
+</tr>
+</table>
+</body>
+</html>

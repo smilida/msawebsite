@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>序列比对-DNA</title>
+<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -21,11 +21,11 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">序列比对</div>
-<div class="menu-item"><a href="index.html" class="current">首页</a></div>
+<div class="menu-item"><a href="index.html">首页</a></div>
 <div class="menu-item"><a href="psa.html">双序列比对</a></div>
 <div class="menu-item"><a href="msa.html">多序列比对</a></div>
 <div class="menu-item"><a href="measure.html">评分标准</a></div>
-<div class="menu-item"><a href="realignment.html">Realignment</a></div>
+<div class="menu-item"><a href="realignment.html" class="current">Realignment</a></div>
 <div class="menu-item"><a href="datasets.html">测试数据集</a></div>
 <div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
 <div class="menu-item"><a href="tools.html">实用工具</a></div>
@@ -35,10 +35,22 @@ MathJax.Hub.Config({
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>序列比对-DNA</h1>
+<h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
-<p>序列比对是将两个或多个序列排列在一起，标明其相似之处。序列中可以插入间隔（通常用短横线“-”表示）。对应的相同或相似的符号（在核酸中是A, T（或U）, C, G，在蛋白质中是氨基酸残基的单字母表示）排列在同一列上。这一方法常用于研究由共同祖先进化而来的序列，特别是如蛋白质序列或DNA序列等生物序列。在比对中，错配与突变相应，而空位与插入或缺失对应。序列比对还可用于语言进化或文本间相似性之类的研究。
+<h2>Realigners based on vertical and horizontal partitioning</h2>
+<h3>1. RASCAL (2003)</h3>
+<ul>
+<li><p>Test data: Protein (BALIBASE, ProDom, )
 </p>
+</li>
+<li><p><a href="ftp://ftp-igbmc.u-strasbg.fr/pub/RASCAL" target=&ldquo;blank&rdquo;>The link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3>2. <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-144#Sec3" target=&ldquo;blank&rdquo;>Crumble and Prune (2011)</a></h3>
+<h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Vertical partitioning realigners</a></h2>
+<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Horizontal partitioning realigners</a></h2>
+<h2><a href="realign_in_msa.html" target=&ldquo;blank&rdquo;>Realignment in MSA tools</a></h2>
 </td>
 </tr>
 </table>

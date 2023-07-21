@@ -1,0 +1,71 @@
+# jemdoc: menu{MENU}{realignment.html}, nofooter
+= [realignment.html Realignment Methods]
+
+== Realignment in MSA tools
+
+=== MULTALIGN (1987)
+
+=== PRRP (1996)
+
+=== [https://genome.cshlp.org/content/13/4/721.full LAGAN and Multi-LAGAN (2002)]
+
+- [http://lagan.stanford.edu LAGAN's homepage] 
+
+=== MAFFT
+
+=== MUSCLE
+
+=== PROBCONS (2004)
+
+=== SIROA (2004)
+
+=== MSAID (2005)
+
+=== SPEM (2005)
+
+=== PRIME (2006)
+
+- [http://prime.cbrc.jp/ The link is unavailable.]
+
+=== MANGO (2007)
+
+=== [https://academic.oup.com/bioinformatics/article/23/9/1073/272774 COBALT (2007)]
+
+- [ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt The link is unavailable.]
+
+
+=== [https://academic.oup.com/bioinformatics/article/24/4/492/207730 PRALINE™ (2008)]
+
+- [https://www.ibi.vu.nl/programs/pralinewww/ PRALINE's homepage] 
+
+
+
+=== [https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26 PAAA (2011)]
+Its refinement follows:
+. Construct a new guide tree utilizing a new distance matrix based on the MSA.
+. Remove an edge from the new guide tree to obtain two new subtrees.
+. Realign the sequences in each subtree.
+. Align the two profiles associated with the two subtrees to get a global MSA.
+
+Until convergence.
+- This method is the same as MUSCLE's refinement.
+- The source code is not publicized.
+
+=== [https://link.springer.com/article/10.1186/1471-2105-13-64 MMSA (2012)]
+
+- [http://ekhidna.biocenter.helsinki.fi/MMSA The link is unavailable.]
+
+=== FAMSA
+
+=== [https://www.nature.com/articles/srep41553 QuickProbs2 (2017)]
+
+=== [https://ieeexplore.ieee.org/abstract/document/8567458 RLALIGN (2018)]
+
+=== PRANK
+
+
+== [realigner_ver.html Vertical partitioning realigners]
+
+== [realigner_hor.html Horizontal partitioning realigners]
+
+== [realigner_both.html Realigners based on vertical and horizontal partitioning]

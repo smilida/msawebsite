@@ -1,0 +1,21 @@
+# jemdoc: menu{MENU}{realignment.html}, nofooter
+= Realignment Methods
+
+
+== [realigner_ver.html Vertical partitioning realigners]
+Cut the input sequences into substrings, and once these shorter substrings are realigned, they stitch their alignments together.
+
+== [realigner_hor.html Horizontal partitioning realigners]
+Split an alignment into groups of whole sequences, which are then merged together by realigning between groups, possibly using each group’s induced subalignment.
+
+There are three restricted partitioning techniques:
+
+1. Single-type partitioning
+
+2. Double-type partitioning
+
+3. Tree-dependent partitioning
+
+== [realigner_both.html Realigners based on vertical and horizontal partitioning]
+
+== [realign_in_msa.html Realignment in MSA tools]
