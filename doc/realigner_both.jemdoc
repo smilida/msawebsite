@@ -1,9 +1,12 @@
 # jemdoc: menu{MENU}{realignment.html}, nofooter
 = [realignment.html Realignment Methods]
+
 == Realigners based on vertical and horizontal partitioning
 
 === 1. RASCAL (2003)
 
+- Test data: Protein (BALIBASE, ProDom, )
+- [ftp://ftp-igbmc.u-strasbg.fr/pub/RASCAL The link is unavailable.]
 
 === 2. [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-144\#Sec3 Crumble and Prune (2011)]
 
