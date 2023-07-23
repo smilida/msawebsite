@@ -3,16 +3,28 @@
 
 == Realigners based on vertical and horizontal partitioning
 
-=== 1. RASCAL (2003)
+=== [https://academic.oup.com/bioinformatics/article-abstract/19/9/1155/285019 1. RASCAL (2003)]
+The alignment is initially divided *horizontally and vertically* to identify well-aligned, reliable regions. Potential alignment errors are detected by comparing statistical models of the reliable regions. RASCAL then performs a single realignment of each badly aligned region using an algorithm similar to that implemented in ClustalW.
 
-- Test data: Protein (BALIBASE, ProDom, )
-- [ftp://ftp-igbmc.u-strasbg.fr/pub/RASCAL The link is unavailable.]
+Partitioning steps:
+. The alignment is divided horizontally into sequence subfamilies using Secator
+. Then the alignment is divided vertically into 'core block' regions that are reliably aligned in the majority of the sequences.
 
-=== 2. [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-144\#Sec3 Crumble and Prune (2011)]
+These global core blocks are determined using the mean distance column scores implemented in the NorMD OF. Local core block regions are also determined for each subfamily individually, using the same method as for the complete family.
+- Test data: Protein (BALIBASE, ProDom)
+- [ftp://ftp-igbmc.u-strasbg.fr/pub/RASCAL The source code link is unavailable.]
 
+=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-144\#Sec3 2. Crumble and Prune (2011)]
+\[vertical\] *Crumble* deals with problems that are large in sequence length. It breaks up long alignment problems into shorter problems. 
 
-== [realigner_ver.html Vertical partitioning realigners]
+\[horizontal\] *Prune* handles problems with a large number of sequences. It cuts up deep alignment problems into sub-problems with fewer sequences. 
 
-== [realigner_hor.html Horizontal partitioning realigners]
+*Job-tree* combine Crumble and Prune to align long and deep sequences.
+- Test data: human genome, Rfam 
+- [http://hgwdev.cse.ucsc.edu/~krish/crumble_prune/ The source code link is unavailable.]
+
+== [realigner_ver.html Realigners based on vertical partitioning]
+
+== [realigner_hor.html Realigners based on horizontal partitioning]
 
 == [realign_in_msa.html Realignment in MSA tools]

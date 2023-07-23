@@ -7,6 +7,10 @@
 
 === PRRP (1996)
 
+=== [https://academic.oup.com/bioinformatics/article/16/9/808/307658 OMA (2000)]
+
+- [https://bibiserv.cebitec.uni-bielefeld.de/oma/ OMA's homepage]
+
 === [https://genome.cshlp.org/content/13/4/721.full LAGAN and Multi-LAGAN (2002)]
 
 - [http://lagan.stanford.edu LAGAN's homepage] 
@@ -17,6 +21,8 @@
 
 === PROBCONS (2004)
 
+=== Opal (2004)
+
 === SIROA (2004)
 
 === MSAID (2005)
@@ -25,20 +31,20 @@
 
 === PRIME (2006)
 
-- [http://prime.cbrc.jp/ The link is unavailable.]
+- [http://prime.cbrc.jp/ The source code link is unavailable.]
 
 === MANGO (2007)
 
 === [https://academic.oup.com/bioinformatics/article/23/9/1073/272774 COBALT (2007)]
 
-- [ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt The link is unavailable.]
+- [ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt The source code link is unavailable.]
 
 
 === [https://academic.oup.com/bioinformatics/article/24/4/492/207730 PRALINE™ (2008)]
 
 - [https://www.ibi.vu.nl/programs/pralinewww/ PRALINE's homepage] 
 
-
+=== IPAM (2009)
 
 === [https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26 PAAA (2011)]
 Its refinement follows:
@@ -53,7 +59,7 @@ Until convergence.
 
 === [https://link.springer.com/article/10.1186/1471-2105-13-64 MMSA (2012)]
 
-- [http://ekhidna.biocenter.helsinki.fi/MMSA The link is unavailable.]
+- [http://ekhidna.biocenter.helsinki.fi/MMSA The source code link is unavailable.]
 
 === FAMSA
 
@@ -63,9 +69,11 @@ Until convergence.
 
 === PRANK
 
+=== SplitVert (2020)
 
-== [realigner_ver.html Vertical partitioning realigners]
 
-== [realigner_hor.html Horizontal partitioning realigners]
+== [realigner_ver.html Realigners based on vertical partitioning]
+
+== [realigner_hor.html Realigners based on horizontal partitioning]
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
