@@ -37,22 +37,83 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1>Realignment Methods</h1>
 </div>
-<h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Vertical partitioning realigners</a></h2>
-<p>Cut the input sequences into substrings, and once these shorter substrings are realigned, they stitch their alignments together.
+<p>The progressive method is employed in most multiple sequence alignment tools but based on the rule of “Once a gap, always a gap,” wrong insertions will remain in the output, impacting the accuracy of the final alignment.
 </p>
-<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Horizontal partitioning realigners</a></h2>
-<p>Split an alignment into groups of whole sequences, which are then merged together by realigning between groups, possibly using each group’s induced subalignment.
+<p><b>Realignment methods, sometimes also considered refinement methods, which choose sequences or blocks of existing alignments and realign in the hopes that the realigned result is more accurate.</b>
 </p>
-<p>There are three restricted partitioning techniques:
+<p>Both <b>the realigner</b> and the <b>post-processing of some MSA tools</b> utilize the realignment method, and here we summarize it by <b>partitioning</b>.
+In addition, the realignment methods <b>often (do not always)</b> combine with iterative methods. <b>The five commonly iterative methods are:</b>
 </p>
-<p>1. Single-type partitioning
+<ol>
+<li><p>Round-robin(RR) iterative algorithm
 </p>
-<p>2. Double-type partitioning
+</li>
+<li><p>Remove First(RF) iterative algorithm
 </p>
-<p>3. Tree-dependent partitioning
+</li>
+<li><p>Best First(BF) iterative algorithm
 </p>
+</li>
+<li><p>Random(RD) iterative algorithm
+</p>
+</li>
+<li><p>Tree-based(TB) iterative algorithm
+</p>
+</li>
+</ol>
+<h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
+<p>Summary of the realigners based on vertical partitioning.
+</p>
+<p>There are tow restricted vertical partitioning (column-oriented partitioning):
+</p>
+<ol>
+<li><p>Gap-based partitioning
+</p>
+</li>
+<li><p>Whole same column-based partitioning
+</p>
+</li>
+</ol>
+<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
+<p>Summary of the realigners based on horizontal partitioning.
+</p>
+<p>There are three restricted horizontal partitioning (row-oriented partitioning):
+</p>
+<ol>
+<li><p>Single-type partitioning
+</p>
+</li>
+<li><p>Double-type partitioning
+</p>
+</li>
+<li><p>Tree-dependent partitioning
+</p>
+</li>
+</ol>
 <h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
+<p>Summary of the realigners based on vertical and horizontal partitioning.
+</p>
 <h2><a href="realign_in_msa.html" target=&ldquo;blank&rdquo;>Realignment in MSA tools</a></h2>
+<p>Summary of the realignment post-processing in MSA tools.
+</p>
+<h2>Reference</h2>
+<ol>
+<li><p>Gotoh, Osamu. &ldquo;Optimal alignment between groups of sequences and its application to multiple sequence alignment.&rdquo; Bioinformatics 9.3 (1993): 361-370.
+</p>
+</li>
+<li><p>Hirosawa, Makoto, et al. &ldquo;Comprehensive study on iterative algorithms of multiple sequence alignment.&rdquo; Bioinformatics 11.1 (1995): 13-18.
+</p>
+</li>
+<li><p>Wallace, Iain M., and Desmond G. Higgins. &ldquo;Evaluation of iterative alignment algorithms for multiple alignment.&rdquo; Bioinformatics 21.8 (2005): 1408-1414.
+</p>
+</li>
+<li><p>Wakatsu, Daigo, and Takeo Okazaki. &ldquo;Statistical Comparative Study of Multiple Sequence Alignment Scores of Iterative Refinement Algorithms.&rdquo; IPSJ Transactions on Bioinformatics 2 (2009): 74-82.
+</p>
+</li>
+<li><p>DeBlasio, Dan, and John Kececioglu. Parameter advising for multiple sequence alignment. Vol. 26. Springer, 2018.
+</p>
+</li>
+</ol>
 </td>
 </tr>
 </table>

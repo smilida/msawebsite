@@ -1,21 +1,42 @@
 # jemdoc: menu{MENU}{realignment.html}, nofooter
 = Realignment Methods
 
+The progressive method is employed in most multiple sequence alignment tools but based on the rule of “Once a gap, always a gap,” wrong insertions will remain in the output, impacting the accuracy of the final alignment.
 
-== [realigner_ver.html Vertical partitioning realigners]
-Cut the input sequences into substrings, and once these shorter substrings are realigned, they stitch their alignments together.
+*Realignment methods, sometimes also considered refinement methods, which choose sequences or blocks of existing alignments and realign in the hopes that the realigned result is more accurate.*
 
-== [realigner_hor.html Horizontal partitioning realigners]
-Split an alignment into groups of whole sequences, which are then merged together by realigning between groups, possibly using each group’s induced subalignment.
+Both *the realigner* and the *post-processing of some MSA tools* utilize the realignment method, and here we summarize it by *partitioning*.
+In addition, the realignment methods *often (do not always)* combine with iterative methods. *The five commonly iterative methods are:*
+. Round-robin(RR) iterative algorithm
+. Remove First(RF) iterative algorithm
+. Best First(BF) iterative algorithm
+. Random(RD) iterative algorithm
+. Tree-based(TB) iterative algorithm
 
-There are three restricted partitioning techniques:
+== [realigner_ver.html Realigners based on vertical partitioning]
+Summary of the realigners based on vertical partitioning.
 
-1. Single-type partitioning
+There are tow restricted vertical partitioning (column-oriented partitioning):
+. Gap-based partitioning
+. Whole same column-based partitioning
 
-2. Double-type partitioning
+== [realigner_hor.html Realigners based on horizontal partitioning]
+Summary of the realigners based on horizontal partitioning.
 
-3. Tree-dependent partitioning
+There are three restricted horizontal partitioning (row-oriented partitioning):
+. Single-type partitioning
+. Double-type partitioning
+. Tree-dependent partitioning
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
+Summary of the realigners based on vertical and horizontal partitioning.
 
 == [realign_in_msa.html Realignment in MSA tools]
+Summary of the realignment post-processing in MSA tools.
+
+== Reference
+. Gotoh, Osamu. "Optimal alignment between groups of sequences and its application to multiple sequence alignment." Bioinformatics 9.3 (1993): 361-370.
+. Hirosawa, Makoto, et al. "Comprehensive study on iterative algorithms of multiple sequence alignment." Bioinformatics 11.1 (1995): 13-18.
+. Wallace, Iain M., and Desmond G. Higgins. "Evaluation of iterative alignment algorithms for multiple alignment." Bioinformatics 21.8 (2005): 1408-1414.
+. Wakatsu, Daigo, and Takeo Okazaki. "Statistical Comparative Study of Multiple Sequence Alignment Scores of Iterative Refinement Algorithms." IPSJ Transactions on Bioinformatics 2 (2009): 74-82.
+. DeBlasio, Dan, and John Kececioglu. Parameter advising for multiple sequence alignment. Vol. 26. Springer, 2018.

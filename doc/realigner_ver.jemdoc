@@ -1,10 +1,10 @@
 # jemdoc: menu{MENU}{realignment.html}, nofooter
 = [realignment.html Realignment Methods]
 
-== Vertical partitioning realigners
+== Realigners based on vertical partitioning
 Cut the input sequences into substrings, and once these shorter substrings are realigned, they stitch their alignments together.
 
-=== 1. [https://informatica.si/index.php/informatica/article/view/2621/0 Refin-Align (2019)] 
+=== [https://informatica.si/index.php/informatica/article/view/2621/0 1. Refin-Align (2019)] 
 In each iteration:
 . Extract the blocks from the  initial alignment based on the columns with the same bases.
 . Delete all gaps in each block and realign it with Promalign.
@@ -15,7 +15,7 @@ Until no longer improve the SP score of each block.
 - Test data: Protein (BALIBASE, PREFAB, OXBENCH, HOMSTRAD)
 - The source code is not publicized.
 
-=== 2. [https://www.worldscientific.com/doi/epdf/10.1142/S0219720022400029 RPfam (2022)]
+=== [https://www.worldscientific.com/doi/epdf/10.1142/S0219720022400029 2. RPfam (2022)]
 RPfam employs the Simulated Annealing algorithm in iteration.
 
 In each iteration:
@@ -29,7 +29,7 @@ Until the temperature is down to the setting value the iteration ends.
 - Test data: Protein (PFAM)
 - The source code is not publicized.
 
-== [realigner_hor.html Horizontal partitioning realigners]
+== [realigner_hor.html Realigners based on horizontal partitioning]
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
 
