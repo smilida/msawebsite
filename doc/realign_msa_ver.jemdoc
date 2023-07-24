@@ -1,0 +1,28 @@
+# jemdoc: menu{MENU}{realignment.html}, nofooter
+= [realignment.html Realignment Methods]
+
+== Vertical-oriented realignment in MSA tools
+
+=== [https://www.nature.com/articles/srep33964 FAMSA (2016)]
+*Vertical-oriented* refinement:
+. Scan the initial alignment randomly and pick a column containing at least a gap.
+. Split the initial alignment into two sub-alignments based on the column.
+. Remove the empty columns in each sub-alignment and realign them.
+. If the new alignment's accuracy is improved, the new one replaces the initial one.
+
+Until a predefined maximum number of iterations is reached.
+- This realignment or refinement is particularly beneficial for *smaller* sets of sequences.
+- [https://github.com/refresh-bio/FAMSA The github of FAMSA]
+
+=== [https://www.nature.com/articles/srep41553 QuickProbs2 (2017)]
+Its vertical-oriented refinement idea is the same as FAMSA.
+
+- [https://github.com/refresh-bio/QuickProbs The github of QuickProbs]
+
+=== SpliVert (2020)
+
+== [realigner_ver.html Realigners based on vertical partitioning]
+
+== [realigner_hor.html Realigners based on horizontal partitioning]
+
+== [realigner_both.html Realigners based on vertical and horizontal partitioning]

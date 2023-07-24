@@ -37,7 +37,7 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
-<h2>Realignment in MSA tools</h2>
+<h2>Horizontal-oriented realignment in MSA tools</h2>
 <h3>MULTALIGN (1987)</h3>
 <h3>PRRP (1996)</h3>
 <h3><a href="https://academic.oup.com/bioinformatics/article/16/9/808/307658" target=&ldquo;blank&rdquo;>OMA (2000)</a></h3>
@@ -57,6 +57,7 @@ MathJax.Hub.Config({
 <h3>PROBCONS (2004)</h3>
 <h3>Opal (2004)</h3>
 <h3>SIROA (2004)</h3>
+<h3>PRANK (2005)</h3>
 <h3>MSAID (2005)</h3>
 <h3>SPEM (2005)</h3>
 <h3>PRIME (2006)</h3>
@@ -81,7 +82,7 @@ MathJax.Hub.Config({
 <h3>IPAM (2009)</h3>
 <h3>MSAProbs (2010)</h3>
 <h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
-<p><b>Horizontal-oriented</b> refinement:
+<p>Horizontal-oriented realignment:
 </p>
 <ol>
 <li><p>Construct a new guide tree utilizing a new distance matrix based on the MSA.
@@ -105,41 +106,60 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>MMSA (2012)</a></h3>
+<p>This tool implements three different horizontal partitioning methods to realign:
+</p>
+<ol>
+<li><p>Random partitioning
+</p>
+</li>
+<li><p>Tree-dependent partitioning and each time randomly cut a edge of the guiding tree.
+</p>
+</li>
+<li><p>Tree-dependent partitioning and each edge of the tree is cut only once in the breath-first order.
+</p>
+</li>
+</ol>
 <ul>
 <li><p><a href="http://ekhidna.biocenter.helsinki.fi/MMSA" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
 </p>
 </li>
 </ul>
-<h3><a href="https://www.nature.com/articles/srep33964" target=&ldquo;blank&rdquo;>FAMSA (2016)</a></h3>
-<p><b>Vertical-oriented</b> refinement:
+<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>GLProbs (2013)</a></h3>
+<p>Horizontal-oriented realignment:
 </p>
 <ol>
-<li><p>Scan the initial alignment randomly and pick a column containing at least a gap.
+<li><p>Randomly divide the alignment into two profiles
 </p>
 </li>
-<li><p>Split the initial alignment into two sub-alignments based on the column.
-</p>
-</li>
-<li><p>Remove the empty columns in each sub-alignment and realign them.
-</p>
-</li>
-<li><p>If the new alignment's accuracy is improved, the new one replaces the initial one.
+<li><p>Realign the two profiles.
 </p>
 </li>
 </ol>
-<p>Until a predefined maximum number of iterations is reached.
+<p>Until convergence or a predefined maximum number of iterations is reached.
 </p>
 <ul>
-<li><p>This realignment or refinement is particularly beneficial for <b>smaller</b> sets of sequences.
-</p>
-</li>
-<li><p><a href="https://github.com/refresh-bio/FAMSA" target=&ldquo;blank&rdquo;>The github of FAMSA</a>
+<li><p><a href="https://sourceforge.net/projects/glprobs/" target=&ldquo;blank&rdquo;>GLProbs's source code</a>
 </p>
 </li>
 </ul>
-<h3><a href="https://www.nature.com/articles/srep41553" target=&ldquo;blank&rdquo;>QuickProbs2 (2017)</a></h3>
-<h3>PRANK</h3>
-<h3>SplitVert (2020)</h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>Motalign (2013)</a></h3>
+<p>Its horizontal-oriented refinement idea is the same as MUSCLE.
+</p>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>QuickProbs (2014)</a></h3>
+<p>Its horizontal-oriented refinement idea is the same as MSAProbs.
+</p>
+<p>QuickProbs2 is the last version.
+</p>
+<ul>
+<li><p><a href="https://github.com/refresh-bio/QuickProbs" target=&ldquo;blank&rdquo;>QuickProbs's github</a>
+</p>
+</li>
+</ul>
 <h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
 <h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
 <h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>

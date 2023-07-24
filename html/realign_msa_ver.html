@@ -37,48 +37,46 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
-<h2>Realigners based on vertical and horizontal partitioning</h2>
-<h3><a href="https://academic.oup.com/bioinformatics/article-abstract/19/9/1155/285019" target=&ldquo;blank&rdquo;>1. RASCAL (2003)</a></h3>
-<p>The alignment is initially divided <b>horizontally and vertically</b> to identify well-aligned, reliable regions. Potential alignment errors are detected by comparing statistical models of the reliable regions. RASCAL then performs a single realignment of each badly aligned region using an algorithm similar to that implemented in ClustalW.
-</p>
-<p>Partitioning steps:
+<h2>Vertical-oriented realignment in MSA tools</h2>
+<h3><a href="https://www.nature.com/articles/srep33964" target=&ldquo;blank&rdquo;>FAMSA (2016)</a></h3>
+<p><b>Vertical-oriented</b> refinement:
 </p>
 <ol>
-<li><p>The alignment is divided horizontally into sequence subfamilies using Secator
+<li><p>Scan the initial alignment randomly and pick a column containing at least a gap.
 </p>
 </li>
-<li><p>Then the alignment is divided vertically into 'core block&rsquo; regions that are reliably aligned in the majority of the sequences.
+<li><p>Split the initial alignment into two sub-alignments based on the column.
+</p>
+</li>
+<li><p>Remove the empty columns in each sub-alignment and realign them.
+</p>
+</li>
+<li><p>If the new alignment's accuracy is improved, the new one replaces the initial one.
 </p>
 </li>
 </ol>
-<p>These global core blocks are determined using the mean distance column scores implemented in the NorMD OF. Local core block regions are also determined for each subfamily individually, using the same method as for the complete family.
+<p>Until a predefined maximum number of iterations is reached.
 </p>
 <ul>
-<li><p>Test data: Protein (BALIBASE, ProDom)
+<li><p>This realignment or refinement is particularly beneficial for <b>smaller</b> sets of sequences.
 </p>
 </li>
-<li><p><a href="ftp://ftp-igbmc.u-strasbg.fr/pub/RASCAL" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+<li><p><a href="https://github.com/refresh-bio/FAMSA" target=&ldquo;blank&rdquo;>The github of FAMSA</a>
 </p>
 </li>
 </ul>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-144#Sec3" target=&ldquo;blank&rdquo;>2. Crumble and Prune (2011)</a></h3>
-<p>[vertical] <b>Crumble</b> deals with problems that are large in sequence length. It breaks up long alignment problems into shorter problems. 
-</p>
-<p>[horizontal] <b>Prune</b> handles problems with a large number of sequences. It cuts up deep alignment problems into sub-problems with fewer sequences. 
-</p>
-<p><b>Job-tree</b> combine Crumble and Prune to align long and deep sequences.
+<h3><a href="https://www.nature.com/articles/srep41553" target=&ldquo;blank&rdquo;>QuickProbs2 (2017)</a></h3>
+<p>Its vertical-oriented refinement idea is the same as FAMSA.
 </p>
 <ul>
-<li><p>Test data: human genome, Rfam 
-</p>
-</li>
-<li><p><a href="http://hgwdev.cse.ucsc.edu/~krish/crumble_prune/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+<li><p><a href="https://github.com/refresh-bio/QuickProbs" target=&ldquo;blank&rdquo;>The github of QuickProbs</a>
 </p>
 </li>
 </ul>
+<h3>SpliVert (2020)</h3>
 <h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
 <h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
-<h2><a href="realign_in_msa.html" target=&ldquo;blank&rdquo;>Realignment in MSA tools</a></h2>
+<h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
 </td>
 </tr>
 </table>

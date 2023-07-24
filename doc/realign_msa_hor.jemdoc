@@ -1,7 +1,7 @@
 # jemdoc: menu{MENU}{realignment.html}, nofooter
 = [realignment.html Realignment Methods]
 
-== Realignment in MSA tools
+== Horizontal-oriented realignment in MSA tools
 
 === MULTALIGN (1987)
 
@@ -24,6 +24,8 @@
 === Opal (2004)
 
 === SIROA (2004)
+
+=== PRANK (2005)
 
 === MSAID (2005)
 
@@ -49,7 +51,7 @@
 === MSAProbs (2010)
 
 === [https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26 PAAA (2011)]
-*Horizontal-oriented* refinement:
+Horizontal-oriented realignment:
 . Construct a new guide tree utilizing a new distance matrix based on the MSA.
 . Remove an edge from the new guide tree to obtain two new subtrees.
 . Realign the sequences in each subtree.
@@ -59,28 +61,34 @@ Until convergence.
 - The source code is not publicized.
 
 === [https://link.springer.com/article/10.1186/1471-2105-13-64 MMSA (2012)]
+This tool implements three different horizontal partitioning methods to realign:
+. Random partitioning
+. Tree-dependent partitioning and each time randomly cut a edge of the guiding tree.
+. Tree-dependent partitioning and each edge of the tree is cut only once in the breath-first order.
 
 - [http://ekhidna.biocenter.helsinki.fi/MMSA The source code link is unavailable.]
 
+=== [https://dl.acm.org/doi/abs/10.1145/2506583.2506611 GLProbs (2013)]
+Horizontal-oriented realignment:
+. Randomly divide the alignment into two profiles
+. Realign the two profiles.
+
+Until convergence or a predefined maximum number of iterations is reached.
+- [https://sourceforge.net/projects/glprobs/ GLProbs's source code]
+
+=== [https://ieeexplore.ieee.org/abstract/document/6621350 Motalign (2013)]
+Its horizontal-oriented refinement idea is the same as MUSCLE.
+- The source code is not publicized.
+
+=== [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901 QuickProbs (2014)]
+Its horizontal-oriented refinement idea is the same as MSAProbs.
+
+QuickProbs2 is the last version.
+- [https://github.com/refresh-bio/QuickProbs QuickProbs's github]
 
 
-=== [https://www.nature.com/articles/srep33964 FAMSA (2016)]
-*Vertical-oriented* refinement:
-. Scan the initial alignment randomly and pick a column containing at least a gap.
-. Split the initial alignment into two sub-alignments based on the column.
-. Remove the empty columns in each sub-alignment and realign them.
-. If the new alignment's accuracy is improved, the new one replaces the initial one.
-
-Until a predefined maximum number of iterations is reached.
-- This realignment or refinement is particularly beneficial for *smaller* sets of sequences.
-- [https://github.com/refresh-bio/FAMSA The github of FAMSA]
-
-=== [https://www.nature.com/articles/srep41553 QuickProbs2 (2017)]
 
 
-=== PRANK
-
-=== SplitVert (2020)
 
 
 == [realigner_ver.html Realigners based on vertical partitioning]
