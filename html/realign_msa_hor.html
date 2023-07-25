@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Realignment Methods</title>
+<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -66,7 +66,24 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h3>MANGO (2007)</h3>
+<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>MANGO (2007)</a></h3>
+<p>Single-type partitioning realignment:
+</p>
+<ol>
+<li><p>Select one sequence.
+</p>
+</li>
+<li><p>Realign it with the others.
+</p>
+</li>
+</ol>
+<p>Until all sequences realign.
+</p>
+<ul>
+<li><p><a href="http://www.bioinfo.org.cn/mango/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+</p>
+</li>
+</ul>
 <h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
 <ul>
 <li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
@@ -80,9 +97,44 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3>IPAM (2009)</h3>
-<h3>MSAProbs (2010)</h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>MSAProbs (2010)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles. (its own pseudo random number generator based on the linear congruential method for random partitioning)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p>[https:<i></i>msaprobs.sourceforge.net/homepage.htm
+</p>
+</li>
+</ul>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>MSACompro (2011)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="http://sysbio.rnet.missouri.edu/multicom_toolbox/" target=&ldquo;blank&rdquo;>MSACompro's homepage</a>
+</p>
+</li>
+</ul>
 <h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
-<p>Horizontal-oriented realignment:
+<p>Tree-dependent partitioning realignment:
 </p>
 <ol>
 <li><p>Construct a new guide tree utilizing a new distance matrix based on the MSA.
@@ -125,7 +177,7 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>GLProbs (2013)</a></h3>
-<p>Horizontal-oriented realignment:
+<p>Random partitioning realignment:
 </p>
 <ol>
 <li><p>Randomly divide the alignment into two profiles
@@ -139,6 +191,27 @@ MathJax.Hub.Config({
 </p>
 <ul>
 <li><p><a href="https://sourceforge.net/projects/glprobs/" target=&ldquo;blank&rdquo;>GLProbs's source code</a>
+</p>
+</li>
+</ul>
+<h3><a href="Javad" target=&ldquo;blank&rdquo;>Sadri's work (2013)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly select an edge and cut it into two subtrees.
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+<li><p>If the result is improved, the guide tree is changed. Otherwise, the previous guide tree is retained.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p>The source code is not publicized.
 </p>
 </li>
 </ul>
@@ -157,6 +230,40 @@ MathJax.Hub.Config({
 </p>
 <ul>
 <li><p><a href="https://github.com/refresh-bio/QuickProbs" target=&ldquo;blank&rdquo;>QuickProbs's github</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>PnpProbs (2016)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until convergence or a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="https://github.com/ytye/PnpProbs" target=&ldquo;blank&rdquo;>PnpProbs's github</a>
+</p>
+</li>
+</ul>
+<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>Pro-malign (2018)</a></h3>
+<p>Its realignment does not employ iterative methods.
+</p>
+<ol>
+<li><p>Create two new families based on the distance matrix obtain from the initial alignment.
+</p>
+</li>
+<li><p>Realign the two families.
+</p>
+</li>
+</ol>
+<ul>
+<li><p>The source code is not publicized.
 </p>
 </li>
 </ul>
