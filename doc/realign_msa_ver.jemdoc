@@ -3,6 +3,12 @@
 
 == Vertical-oriented realignment in MSA tools
 
+=== [https://academic.oup.com/bioinformatics/article/16/9/808/307658 OMA (2000)]
+This tool cuts the sequences into small sub-sequences and implements alignment based on the divide-and-conquer algorithm.
+
+Realignemnt will be performed in the area of W distance near the cutting point.
+- [https://bibiserv.cebitec.uni-bielefeld.de/oma/ OMA's homepage]
+
 === [https://www.nature.com/articles/srep33964 FAMSA (2016)]
 *Vertical-oriented* refinement:
 . Scan the initial alignment randomly and pick a column containing at least a gap.
@@ -18,8 +24,6 @@ Until a predefined maximum number of iterations is reached.
 Its vertical-oriented refinement idea is the same as FAMSA.
 
 - [https://github.com/refresh-bio/QuickProbs The github of QuickProbs]
-
-=== SpliVert (2020)
 
 == [realigner_ver.html Realigners based on vertical partitioning]
 

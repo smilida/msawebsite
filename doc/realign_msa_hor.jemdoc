@@ -7,27 +7,29 @@
 
 === PRRP (1996)
 
-=== [https://academic.oup.com/bioinformatics/article/16/9/808/307658 OMA (2000)]
-
-- [https://bibiserv.cebitec.uni-bielefeld.de/oma/ OMA's homepage]
-
-=== [https://genome.cshlp.org/content/13/4/721.full LAGAN and Multi-LAGAN (2002)]
-
-- [http://lagan.stanford.edu LAGAN's homepage] 
+=== [https://genome.cshlp.org/content/13/4/721.full MLAGAN (2002)]
+The tool's realignment is optional, which is also single-type partitioning, following:
+. Find segments of sequence Xi that align better than a given cutoff, in the existing multiple alignment. These segments are the anchors between Xi and the other sequences.
+. Realign Xi to the multiple alignment of the other sequences with LAGAN.
+- [http://lagan.stanford.edu MLAGAN's homepage] 
 
 === MAFFT
 
 === MUSCLE
 
-=== PROBCONS (2004)
+=== [https://genome.cshlp.org/content/15/2/330.short ProbCons (2004)]
+Random partitioning realignment:
+. Randomly divide the alignment into two profiles. 
+. Realign the two profiles.
+
+Until a predefined maximum number of iterations is reached.
+- [http://probcons.stanford.edu ProbCons's homepage]
 
 === Opal (2004)
 
 === SIROA (2004)
 
 === PRANK (2005)
-
-=== MSAID (2005)
 
 === SPEM (2005)
 

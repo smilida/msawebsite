@@ -40,25 +40,45 @@ MathJax.Hub.Config({
 <h2>Horizontal-oriented realignment in MSA tools</h2>
 <h3>MULTALIGN (1987)</h3>
 <h3>PRRP (1996)</h3>
-<h3><a href="https://academic.oup.com/bioinformatics/article/16/9/808/307658" target=&ldquo;blank&rdquo;>OMA (2000)</a></h3>
-<ul>
-<li><p><a href="https://bibiserv.cebitec.uni-bielefeld.de/oma/" target=&ldquo;blank&rdquo;>OMA's homepage</a>
+<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>MLAGAN (2002)</a></h3>
+<p>The tool's realignment is optional, which is also single-type partitioning, following:
+</p>
+<ol>
+<li><p>Find segments of sequence Xi that align better than a given cutoff, in the existing multiple alignment. These segments are the anchors between Xi and the other sequences.
 </p>
 </li>
-</ul>
-<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>LAGAN and Multi-LAGAN (2002)</a></h3>
+<li><p>Realign Xi to the multiple alignment of the other sequences with LAGAN.
+</p>
+</li>
+</ol>
 <ul>
-<li><p><a href="http://lagan.stanford.edu" target=&ldquo;blank&rdquo;>LAGAN's homepage</a> 
+<li><p><a href="http://lagan.stanford.edu" target=&ldquo;blank&rdquo;>MLAGAN's homepage</a> 
 </p>
 </li>
 </ul>
 <h3>MAFFT</h3>
 <h3>MUSCLE</h3>
-<h3>PROBCONS (2004)</h3>
+<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>ProbCons (2004)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles. 
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="http://probcons.stanford.edu" target=&ldquo;blank&rdquo;>ProbCons's homepage</a>
+</p>
+</li>
+</ul>
 <h3>Opal (2004)</h3>
 <h3>SIROA (2004)</h3>
 <h3>PRANK (2005)</h3>
-<h3>MSAID (2005)</h3>
 <h3>SPEM (2005)</h3>
 <h3>PRIME (2006)</h3>
 <ul>
