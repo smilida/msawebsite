@@ -27,14 +27,15 @@ Until a predefined maximum number of iterations is reached.
 
 === Opal (2004)
 
-=== SIROA (2004)
+=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524 PRIME (2006)]
+Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then *iteratively realign* the alignment using the phylogenetic tree and the pair weights:
 
-=== PRANK (2005)
+Tree-dependent partitioning realignment:
+. Divide the alignment into two groups based on a randomly chosen branch of the tree.
+. Realign the sequences in each subtree.
+Get a new alignment until no better weighted SP score is obtained.
 
-=== SPEM (2005)
-
-=== PRIME (2006)
-
+Repeat steps from the begining of calculate a distance matrix from the new alignment to iteratively realign until the weighted SP score of the alignment dose not improve anymore.
 - [http://prime.cbrc.jp/ The source code link is unavailable.]
 
 === [https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026 MANGO (2007)]
@@ -46,12 +47,21 @@ Until all sequences realign.
 - [http://www.bioinfo.org.cn/mango/ The source code link is unavailable.]
 
 === [https://academic.oup.com/bioinformatics/article/23/9/1073/272774 COBALT (2007)]
+Tree-dependent partitioning realignment:
+. Partition the current initial alignment into two profiles separated by a edge (*Not its longest one*.)
+. Realign the two profiles.
 
+For each edge, this repeats up to five times, or as long as the best score from the current iteration improves the best score from the previous iteration by at least 2%.
+- (Optional) Perform refinement by determining a new set of constraints and iterative tree-dependent partitioning realignment.
 - [ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt The source code link is unavailable.]
 
-
 === [https://academic.oup.com/bioinformatics/article/24/4/492/207730 PRALINE™ (2008)]
+Tree-dependent partitioning realignment:
+. Partition the current initial alignment into two profiles separated by each edge (one iterative cycle means that each edge of the tree is visited once.)
+. Realign the two profiles.
+. The new alignment is retained only if a higher SP score is achieved. 
 
+Until a predefined maximum number of iterations is reached.
 - [https://www.ibi.vu.nl/programs/pralinewww/ PRALINE's homepage] 
 
 === IPAM (2009)

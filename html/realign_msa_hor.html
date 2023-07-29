@@ -77,10 +77,22 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3>Opal (2004)</h3>
-<h3>SIROA (2004)</h3>
-<h3>PRANK (2005)</h3>
-<h3>SPEM (2005)</h3>
-<h3>PRIME (2006)</h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>PRIME (2006)</a></h3>
+<p>Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then <b>iteratively realign</b> the alignment using the phylogenetic tree and the pair weights:
+</p>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Divide the alignment into two groups based on a randomly chosen branch of the tree.
+</p>
+</li>
+<li><p>Realign the sequences in each subtree.
+Get a new alignment until no better weighted SP score is obtained.
+</p>
+</li>
+</ol>
+<p>Repeat steps from the begining of calculate a distance matrix from the new alignment to iteratively realign until the weighted SP score of the alignment dose not improve anymore.
+</p>
 <ul>
 <li><p><a href="http://prime.cbrc.jp/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
 </p>
@@ -105,12 +117,42 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Partition the current initial alignment into two profiles separated by a edge (<b>Not its longest one</b>.)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>For each edge, this repeats up to five times, or as long as the best score from the current iteration improves the best score from the previous iteration by at least 2%.
+</p>
 <ul>
+<li><p>(Optional) Perform refinement by determining a new set of constraints and iterative tree-dependent partitioning realignment.
+</p>
+</li>
 <li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
 </p>
 </li>
 </ul>
 <h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>PRALINE™ (2008)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Partition the current initial alignment into two profiles separated by each edge (one iterative cycle means that each edge of the tree is visited once.)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+<li><p>The new alignment is retained only if a higher SP score is achieved. 
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
 <ul>
 <li><p><a href="https://www.ibi.vu.nl/programs/pralinewww/" target=&ldquo;blank&rdquo;>PRALINE's homepage</a> 
 </p>
