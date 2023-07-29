@@ -34,6 +34,10 @@ Summary of the realigners based on vertical and horizontal partitioning.
 == [realign_in_msa.html Realignment in MSA tools]
 Summary of the realignment post-processing in MSA tools.
 
+=== [realign_msa_ver.html Vertical-oriented realignment in MSA tools]
+
+=== [realign_msa_hor.html Horizontal-oriented realignment in MSA tools]
+
 == Reference
 . Gotoh, Osamu. "Optimal alignment between groups of sequences and its application to multiple sequence alignment." Bioinformatics 9.3 (1993): 361-370.
 . Hirosawa, Makoto, et al. "Comprehensive study on iterative algorithms of multiple sequence alignment." Bioinformatics 11.1 (1995): 13-18.

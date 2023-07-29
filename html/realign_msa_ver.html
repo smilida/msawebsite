@@ -37,76 +37,14 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
-<h2>Realignment in MSA tools</h2>
-<h3>MULTALIGN (1987)</h3>
-<h3>PRRP (1996)</h3>
+<h2>Vertical-oriented realignment in MSA tools</h2>
 <h3><a href="https://academic.oup.com/bioinformatics/article/16/9/808/307658" target=&ldquo;blank&rdquo;>OMA (2000)</a></h3>
+<p>This tool cuts the sequences into small sub-sequences and implements alignment based on the divide-and-conquer algorithm.
+</p>
+<p>Realignemnt will be performed in the area of W distance near the cutting point.
+</p>
 <ul>
 <li><p><a href="https://bibiserv.cebitec.uni-bielefeld.de/oma/" target=&ldquo;blank&rdquo;>OMA's homepage</a>
-</p>
-</li>
-</ul>
-<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>LAGAN and Multi-LAGAN (2002)</a></h3>
-<ul>
-<li><p><a href="http://lagan.stanford.edu" target=&ldquo;blank&rdquo;>LAGAN's homepage</a> 
-</p>
-</li>
-</ul>
-<h3>MAFFT</h3>
-<h3>MUSCLE</h3>
-<h3>PROBCONS (2004)</h3>
-<h3>Opal (2004)</h3>
-<h3>SIROA (2004)</h3>
-<h3>MSAID (2005)</h3>
-<h3>SPEM (2005)</h3>
-<h3>PRIME (2006)</h3>
-<ul>
-<li><p><a href="http://prime.cbrc.jp/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
-</p>
-</li>
-</ul>
-<h3>MANGO (2007)</h3>
-<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
-<ul>
-<li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
-</p>
-</li>
-</ul>
-<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>PRALINE™ (2008)</a></h3>
-<ul>
-<li><p><a href="https://www.ibi.vu.nl/programs/pralinewww/" target=&ldquo;blank&rdquo;>PRALINE's homepage</a> 
-</p>
-</li>
-</ul>
-<h3>IPAM (2009)</h3>
-<h3>MSAProbs (2010)</h3>
-<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
-<p><b>Horizontal-oriented</b> refinement:
-</p>
-<ol>
-<li><p>Construct a new guide tree utilizing a new distance matrix based on the MSA.
-</p>
-</li>
-<li><p>Remove an edge from the new guide tree to obtain two new subtrees.
-</p>
-</li>
-<li><p>Realign the sequences in each subtree.
-</p>
-</li>
-<li><p>Align the two profiles associated with the two subtrees to get a global MSA.
-</p>
-</li>
-</ol>
-<p>Until convergence.
-</p>
-<ul>
-<li><p>The source code is not publicized.
-</p>
-</li>
-</ul>
-<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>MMSA (2012)</a></h3>
-<ul>
-<li><p><a href="http://ekhidna.biocenter.helsinki.fi/MMSA" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
 </p>
 </li>
 </ul>
@@ -138,8 +76,13 @@ MathJax.Hub.Config({
 </li>
 </ul>
 <h3><a href="https://www.nature.com/articles/srep41553" target=&ldquo;blank&rdquo;>QuickProbs2 (2017)</a></h3>
-<h3>PRANK</h3>
-<h3>SplitVert (2020)</h3>
+<p>Its vertical-oriented refinement idea is the same as FAMSA.
+</p>
+<ul>
+<li><p><a href="https://github.com/refresh-bio/QuickProbs" target=&ldquo;blank&rdquo;>The github of QuickProbs</a>
+</p>
+</li>
+</ul>
 <h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
 <h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
 <h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>

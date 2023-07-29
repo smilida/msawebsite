@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="realignment.html" class="current">Realignment</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_datasets.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
+</div>
+<h2>Horizontal-oriented realignment in MSA tools</h2>
+<h3>MULTALIGN (1987)</h3>
+<h3>PRRP (1996)</h3>
+<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>MLAGAN (2002)</a></h3>
+<p>The tool's realignment is optional, which is also single-type partitioning, following:
+</p>
+<ol>
+<li><p>Find segments of sequence Xi that align better than a given cutoff, in the existing multiple alignment. These segments are the anchors between Xi and the other sequences.
+</p>
+</li>
+<li><p>Realign Xi to the multiple alignment of the other sequences with LAGAN.
+</p>
+</li>
+</ol>
+<ul>
+<li><p><a href="http://lagan.stanford.edu" target=&ldquo;blank&rdquo;>MLAGAN's homepage</a> 
+</p>
+</li>
+</ul>
+<h3>MAFFT</h3>
+<h3>MUSCLE</h3>
+<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>ProbCons (2004)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles. 
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="http://probcons.stanford.edu" target=&ldquo;blank&rdquo;>ProbCons's homepage</a>
+</p>
+</li>
+</ul>
+<h3>Opal (2004)</h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>PRIME (2006)</a></h3>
+<p>Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then <b>iteratively realign</b> the alignment using the phylogenetic tree and the pair weights:
+</p>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Divide the alignment into two groups based on a randomly chosen branch of the tree.
+</p>
+</li>
+<li><p>Realign the sequences in each subtree.
+Get a new alignment until no better weighted SP score is obtained.
+</p>
+</li>
+</ol>
+<p>Repeat steps from the begining of calculate a distance matrix from the new alignment to iteratively realign until the weighted SP score of the alignment dose not improve anymore.
+</p>
+<ul>
+<li><p><a href="http://prime.cbrc.jp/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>MANGO (2007)</a></h3>
+<p>Single-type partitioning realignment:
+</p>
+<ol>
+<li><p>Select one sequence.
+</p>
+</li>
+<li><p>Realign it with the others.
+</p>
+</li>
+</ol>
+<p>Until all sequences realign.
+</p>
+<ul>
+<li><p><a href="http://www.bioinfo.org.cn/mango/" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Partition the current initial alignment into two profiles separated by a edge (<b>Not its longest one</b>.)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>For each edge, this repeats up to five times, or as long as the best score from the current iteration improves the best score from the previous iteration by at least 2%.
+</p>
+<ul>
+<li><p>(Optional) Perform refinement by determining a new set of constraints and iterative tree-dependent partitioning realignment.
+</p>
+</li>
+<li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>PRALINE™ (2008)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Partition the current initial alignment into two profiles separated by each edge (one iterative cycle means that each edge of the tree is visited once.)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+<li><p>The new alignment is retained only if a higher SP score is achieved. 
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="https://www.ibi.vu.nl/programs/pralinewww/" target=&ldquo;blank&rdquo;>PRALINE's homepage</a> 
+</p>
+</li>
+</ul>
+<h3>IPAM (2009)</h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>MSAProbs (2010)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles. (its own pseudo random number generator based on the linear congruential method for random partitioning)
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p>[https:<i></i>msaprobs.sourceforge.net/homepage.htm
+</p>
+</li>
+</ul>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>MSACompro (2011)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="http://sysbio.rnet.missouri.edu/multicom_toolbox/" target=&ldquo;blank&rdquo;>MSACompro's homepage</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Construct a new guide tree utilizing a new distance matrix based on the MSA.
+</p>
+</li>
+<li><p>Remove an edge from the new guide tree to obtain two new subtrees.
+</p>
+</li>
+<li><p>Realign the sequences in each subtree.
+</p>
+</li>
+<li><p>Align the two profiles associated with the two subtrees to get a global MSA.
+</p>
+</li>
+</ol>
+<p>Until convergence.
+</p>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>MMSA (2012)</a></h3>
+<p>This tool implements three different horizontal partitioning methods to realign:
+</p>
+<ol>
+<li><p>Random partitioning
+</p>
+</li>
+<li><p>Tree-dependent partitioning and each time randomly cut a edge of the guiding tree.
+</p>
+</li>
+<li><p>Tree-dependent partitioning and each edge of the tree is cut only once in the breath-first order.
+</p>
+</li>
+</ol>
+<ul>
+<li><p><a href="http://ekhidna.biocenter.helsinki.fi/MMSA" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>GLProbs (2013)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until convergence or a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="https://sourceforge.net/projects/glprobs/" target=&ldquo;blank&rdquo;>GLProbs's source code</a>
+</p>
+</li>
+</ul>
+<h3><a href="Javad" target=&ldquo;blank&rdquo;>Sadri's work (2013)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly select an edge and cut it into two subtrees.
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+<li><p>If the result is improved, the guide tree is changed. Otherwise, the previous guide tree is retained.
+</p>
+</li>
+</ol>
+<p>Until a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>Motalign (2013)</a></h3>
+<p>Its horizontal-oriented refinement idea is the same as MUSCLE.
+</p>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>QuickProbs (2014)</a></h3>
+<p>Its horizontal-oriented refinement idea is the same as MSAProbs.
+</p>
+<p>QuickProbs2 is the last version.
+</p>
+<ul>
+<li><p><a href="https://github.com/refresh-bio/QuickProbs" target=&ldquo;blank&rdquo;>QuickProbs's github</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>PnpProbs (2016)</a></h3>
+<p>Random partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles
+</p>
+</li>
+<li><p>Realign the two profiles.
+</p>
+</li>
+</ol>
+<p>Until convergence or a predefined maximum number of iterations is reached.
+</p>
+<ul>
+<li><p><a href="https://github.com/ytye/PnpProbs" target=&ldquo;blank&rdquo;>PnpProbs's github</a>
+</p>
+</li>
+</ul>
+<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>Pro-malign (2018)</a></h3>
+<p>Its realignment does not employ iterative methods.
+</p>
+<ol>
+<li><p>Create two new families based on the distance matrix obtain from the initial alignment.
+</p>
+</li>
+<li><p>Realign the two families.
+</p>
+</li>
+</ol>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
+<h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
+<h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
+</td>
+</tr>
+</table>
+</body>
+</html>

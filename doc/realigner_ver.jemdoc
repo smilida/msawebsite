@@ -15,7 +15,16 @@ Until no longer improve the SP score of each block.
 - Test data: Protein (BALIBASE, PREFAB, OXBENCH, HOMSTRAD)
 - The source code is not publicized.
 
-=== [https://www.worldscientific.com/doi/epdf/10.1142/S0219720022400029 2. RPfam (2022)]
+=== [https://www.ingentaconnect.com/content/ben/ppl/2020/00000027/00000004/art00007 2. SpliVert (2020)]
+. Split the initial alignment vertically into 3 parts.
+. Remove the gap characters in the middle part and realign it alone.
+. Splice the realigned middle parts with the other two initial pieces to obtain a realigned alignment.
+
+- Test data: Protein (BALIBASE, OXBENCH, SABmark)
+- We did not find the source code.
+
+
+=== [https://www.worldscientific.com/doi/epdf/10.1142/S0219720022400029 3. RPfam (2022)]
 RPfam employs the Simulated Annealing algorithm in iteration.
 
 In each iteration:
