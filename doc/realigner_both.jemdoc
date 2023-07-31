@@ -27,4 +27,8 @@ These global core blocks are determined using the mean distance column scores im
 
 == [realigner_hor.html Realigners based on horizontal partitioning]
 
-== [realign_in_msa.html Realignment in MSA tools]
+== Realignment in MSA tools
+
+=== [realign_msa_ver.html Vertical-oriented realignment in MSA tools]
+
+=== [realign_msa_hor.html Horizontal-oriented realignment in MSA tools]

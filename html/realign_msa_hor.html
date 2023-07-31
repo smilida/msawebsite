@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></title>
+<title>Realignment Methods</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -38,9 +38,9 @@ MathJax.Hub.Config({
 <h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
 <h2>Horizontal-oriented realignment in MSA tools</h2>
-<h3>MULTALIGN (1987)</h3>
-<h3>PRRP (1996)</h3>
-<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>MLAGAN (2002)</a></h3>
+<h3>1. MULTALIGN (1987)</h3>
+<h3>2. PRRP (1996)</h3>
+<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>3. MLAGAN (2002)</a></h3>
 <p>The tool's realignment is optional, which is also single-type partitioning, following:
 </p>
 <ol>
@@ -56,9 +56,9 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h3>MAFFT</h3>
-<h3>MUSCLE</h3>
-<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>ProbCons (2004)</a></h3>
+<h3>4. MAFFT</h3>
+<h3>5. MUSCLE</h3>
+<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>6. ProbCons (2004)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -76,8 +76,8 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h3>Opal (2004)</h3>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>PRIME (2006)</a></h3>
+<h3>7. Opal (2004)</h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>8. PRIME (2006)</a></h3>
 <p>Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then <b>iteratively realign</b> the alignment using the phylogenetic tree and the pair weights:
 </p>
 <p>Tree-dependent partitioning realignment:
@@ -98,7 +98,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>MANGO (2007)</a></h3>
+<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>9. MANGO (2007)</a></h3>
 <p>Single-type partitioning realignment:
 </p>
 <ol>
@@ -116,7 +116,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>COBALT (2007)</a></h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>10. COBALT (2007)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -137,7 +137,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>PRALINE™ (2008)</a></h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>11. PRALINE™ (2008)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -158,8 +158,8 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3>IPAM (2009)</h3>
-<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>MSAProbs (2010)</a></h3>
+<h3>12. IPAM (2009)</h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>13. MSAProbs (2010)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -177,7 +177,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>MSACompro (2011)</a></h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>14. MSACompro (2011)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -195,7 +195,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>PAAA (2011)</a></h3>
+<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>15. PAAA (2011)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -219,7 +219,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>MMSA (2012)</a></h3>
+<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>16. MMSA (2012)</a></h3>
 <p>This tool implements three different horizontal partitioning methods to realign:
 </p>
 <ol>
@@ -238,7 +238,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>GLProbs (2013)</a></h3>
+<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>17. GLProbs (2013)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -256,7 +256,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="Javad" target=&ldquo;blank&rdquo;>Sadri's work (2013)</a></h3>
+<h3><a href="https" target=&ldquo;blank&rdquo;>18. Javad Sadri's work (2013)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -277,7 +277,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>Motalign (2013)</a></h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>19. Motalign (2013)</a></h3>
 <p>Its horizontal-oriented refinement idea is the same as MUSCLE.
 </p>
 <ul>
@@ -285,7 +285,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>QuickProbs (2014)</a></h3>
+<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>20. QuickProbs (2014)</a></h3>
 <p>Its horizontal-oriented refinement idea is the same as MSAProbs.
 </p>
 <p>QuickProbs2 is the last version.
@@ -295,7 +295,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>PnpProbs (2016)</a></h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>21. PnpProbs (2016)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -313,7 +313,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>Pro-malign (2018)</a></h3>
+<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>22. Pro-malign (2018)</a></h3>
 <p>Its realignment does not employ iterative methods.
 </p>
 <ol>
@@ -332,6 +332,8 @@ Get a new alignment until no better weighted SP score is obtained.
 <h2><a href="realigner_ver.html" target=&ldquo;blank&rdquo;>Realigners based on vertical partitioning</a></h2>
 <h2><a href="realigner_hor.html" target=&ldquo;blank&rdquo;>Realigners based on horizontal partitioning</a></h2>
 <h2><a href="realigner_both.html" target=&ldquo;blank&rdquo;>Realigners based on vertical and horizontal partitioning</a></h2>
+<h2>Realignment in MSA tools</h2>
+<h3><a href="realign_msa_ver.html" target=&ldquo;blank&rdquo;>Vertical-oriented realignment in MSA tools</a></h3>
 </td>
 </tr>
 </table>

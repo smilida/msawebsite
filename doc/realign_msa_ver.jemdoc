@@ -3,13 +3,13 @@
 
 == Vertical-oriented realignment in MSA tools
 
-=== [https://academic.oup.com/bioinformatics/article/16/9/808/307658 OMA (2000)]
+=== [https://academic.oup.com/bioinformatics/article/16/9/808/307658 1. OMA (2000)]
 This tool cuts the sequences into small sub-sequences and implements alignment based on the divide-and-conquer algorithm.
 
 Realignemnt will be performed in the area of W distance near the cutting point.
 - [https://bibiserv.cebitec.uni-bielefeld.de/oma/ OMA's homepage]
 
-=== [https://www.nature.com/articles/srep33964 FAMSA (2016)]
+=== [https://www.nature.com/articles/srep33964 2. FAMSA (2016)]
 *Vertical-oriented* refinement:
 . Scan the initial alignment randomly and pick a column containing at least a gap.
 . Split the initial alignment into two sub-alignments based on the column.
@@ -20,7 +20,7 @@ Until a predefined maximum number of iterations is reached.
 - This realignment or refinement is particularly beneficial for *smaller* sets of sequences.
 - [https://github.com/refresh-bio/FAMSA The github of FAMSA]
 
-=== [https://www.nature.com/articles/srep41553 QuickProbs2 (2017)]
+=== [https://www.nature.com/articles/srep41553 3. QuickProbs2 (2017)]
 Its vertical-oriented refinement idea is the same as FAMSA.
 
 - [https://github.com/refresh-bio/QuickProbs The github of QuickProbs]
@@ -30,3 +30,7 @@ Its vertical-oriented refinement idea is the same as FAMSA.
 == [realigner_hor.html Realigners based on horizontal partitioning]
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
+
+== Realignment in MSA tools
+
+=== [realign_msa_hor.html Horizontal-oriented realignment in MSA tools]

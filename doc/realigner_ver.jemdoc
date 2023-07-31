@@ -42,4 +42,8 @@ Until the temperature is down to the setting value the iteration ends.
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
 
-== [realign_in_msa.html Realignment in MSA tools]
+== Realignment in MSA tools
+
+=== [realign_msa_ver.html Vertical-oriented realignment in MSA tools]
+
+=== [realign_msa_hor.html Horizontal-oriented realignment in MSA tools]
