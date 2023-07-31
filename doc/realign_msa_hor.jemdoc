@@ -3,21 +3,21 @@
 
 == Horizontal-oriented realignment in MSA tools
 
-=== MULTALIGN (1987)
+=== 1. MULTALIGN (1987)
 
-=== PRRP (1996)
+=== 2. PRRP (1996)
 
-=== [https://genome.cshlp.org/content/13/4/721.full MLAGAN (2002)]
+=== [https://genome.cshlp.org/content/13/4/721.full 3. MLAGAN (2002)]
 The tool's realignment is optional, which is also single-type partitioning, following:
 . Find segments of sequence Xi that align better than a given cutoff, in the existing multiple alignment. These segments are the anchors between Xi and the other sequences.
 . Realign Xi to the multiple alignment of the other sequences with LAGAN.
 - [http://lagan.stanford.edu MLAGAN's homepage] 
 
-=== MAFFT
+=== 4. MAFFT
 
-=== MUSCLE
+=== 5. MUSCLE
 
-=== [https://genome.cshlp.org/content/15/2/330.short ProbCons (2004)]
+=== [https://genome.cshlp.org/content/15/2/330.short 6. ProbCons (2004)]
 Random partitioning realignment:
 . Randomly divide the alignment into two profiles. 
 . Realign the two profiles.
@@ -25,9 +25,9 @@ Random partitioning realignment:
 Until a predefined maximum number of iterations is reached.
 - [http://probcons.stanford.edu ProbCons's homepage]
 
-=== Opal (2004)
+=== 7. Opal (2004)
 
-=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524 PRIME (2006)]
+=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524 8. PRIME (2006)]
 Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then *iteratively realign* the alignment using the phylogenetic tree and the pair weights:
 
 Tree-dependent partitioning realignment:
@@ -38,7 +38,7 @@ Get a new alignment until no better weighted SP score is obtained.
 Repeat steps from the begining of calculate a distance matrix from the new alignment to iteratively realign until the weighted SP score of the alignment dose not improve anymore.
 - [http://prime.cbrc.jp/ The source code link is unavailable.]
 
-=== [https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026 MANGO (2007)]
+=== [https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026 9. MANGO (2007)]
 Single-type partitioning realignment:
 . Select one sequence.
 . Realign it with the others.
@@ -46,7 +46,7 @@ Single-type partitioning realignment:
 Until all sequences realign.
 - [http://www.bioinfo.org.cn/mango/ The source code link is unavailable.]
 
-=== [https://academic.oup.com/bioinformatics/article/23/9/1073/272774 COBALT (2007)]
+=== [https://academic.oup.com/bioinformatics/article/23/9/1073/272774 10. COBALT (2007)]
 Tree-dependent partitioning realignment:
 . Partition the current initial alignment into two profiles separated by a edge (*Not its longest one*.)
 . Realign the two profiles.
@@ -55,7 +55,7 @@ For each edge, this repeats up to five times, or as long as the best score from 
 - (Optional) Perform refinement by determining a new set of constraints and iterative tree-dependent partitioning realignment.
 - [ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt The source code link is unavailable.]
 
-=== [https://academic.oup.com/bioinformatics/article/24/4/492/207730 PRALINE™ (2008)]
+=== [https://academic.oup.com/bioinformatics/article/24/4/492/207730 11. PRALINE™ (2008)]
 Tree-dependent partitioning realignment:
 . Partition the current initial alignment into two profiles separated by each edge (one iterative cycle means that each edge of the tree is visited once.)
 . Realign the two profiles.
@@ -64,9 +64,9 @@ Tree-dependent partitioning realignment:
 Until a predefined maximum number of iterations is reached.
 - [https://www.ibi.vu.nl/programs/pralinewww/ PRALINE's homepage] 
 
-=== IPAM (2009)
+=== 12. IPAM (2009)
 
-=== [https://academic.oup.com/bioinformatics/article/26/16/1958/218540 MSAProbs (2010)]
+=== [https://academic.oup.com/bioinformatics/article/26/16/1958/218540 13. MSAProbs (2010)]
 Random partitioning realignment:
 . Randomly divide the alignment into two profiles. (its own pseudo random number generator based on the linear congruential method for random partitioning)
 . Realign the two profiles.
@@ -74,7 +74,7 @@ Random partitioning realignment:
 Until a predefined maximum number of iterations is reached.
 - [https://msaprobs.sourceforge.net/homepage.htm#latest MSAProbs's homepage]
 
-=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472\#Sec2 MSACompro (2011)]
+=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472\#Sec2 14. MSACompro (2011)]
 Random partitioning realignment:
 . Randomly divide the alignment into two profiles
 . Realign the two profiles.
@@ -82,7 +82,7 @@ Random partitioning realignment:
 Until a predefined maximum number of iterations is reached.
 - [http://sysbio.rnet.missouri.edu/multicom_toolbox/ MSACompro's homepage]
 
-=== [https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26 PAAA (2011)]
+=== [https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26 15. PAAA (2011)]
 Tree-dependent partitioning realignment:
 . Construct a new guide tree utilizing a new distance matrix based on the MSA.
 . Remove an edge from the new guide tree to obtain two new subtrees.
@@ -92,7 +92,7 @@ Tree-dependent partitioning realignment:
 Until convergence.
 - The source code is not publicized.
 
-=== [https://link.springer.com/article/10.1186/1471-2105-13-64 MMSA (2012)]
+=== [https://link.springer.com/article/10.1186/1471-2105-13-64 16. MMSA (2012)]
 This tool implements three different horizontal partitioning methods to realign:
 . Random partitioning
 . Tree-dependent partitioning and each time randomly cut a edge of the guiding tree.
@@ -100,7 +100,7 @@ This tool implements three different horizontal partitioning methods to realign:
 
 - [http://ekhidna.biocenter.helsinki.fi/MMSA The source code link is unavailable.]
 
-=== [https://dl.acm.org/doi/abs/10.1145/2506583.2506611 GLProbs (2013)]
+=== [https://dl.acm.org/doi/abs/10.1145/2506583.2506611 17. GLProbs (2013)]
 Random partitioning realignment:
 . Randomly divide the alignment into two profiles
 . Realign the two profiles.
@@ -108,7 +108,7 @@ Random partitioning realignment:
 Until convergence or a predefined maximum number of iterations is reached.
 - [https://sourceforge.net/projects/glprobs/ GLProbs's source code]
 
-=== [Javad Sadri's work (2013)]
+=== [https 18. Javad Sadri's work (2013)]
 Tree-dependent partitioning realignment:
 . Randomly select an edge and cut it into two subtrees.
 . Realign the two profiles.
@@ -117,17 +117,17 @@ Tree-dependent partitioning realignment:
 Until a predefined maximum number of iterations is reached.
 - The source code is not publicized.
 
-=== [https://ieeexplore.ieee.org/abstract/document/6621350 Motalign (2013)]
+=== [https://ieeexplore.ieee.org/abstract/document/6621350 19. Motalign (2013)]
 Its horizontal-oriented refinement idea is the same as MUSCLE.
 - The source code is not publicized.
 
-=== [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901 QuickProbs (2014)]
+=== [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901 20. QuickProbs (2014)]
 Its horizontal-oriented refinement idea is the same as MSAProbs.
 
 QuickProbs2 is the last version.
 - [https://github.com/refresh-bio/QuickProbs QuickProbs's github]
 
-=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7 PnpProbs (2016)]
+=== [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7 21. PnpProbs (2016)]
 Random partitioning realignment:
 . Randomly divide the alignment into two profiles
 . Realign the two profiles.
@@ -135,15 +135,18 @@ Random partitioning realignment:
 Until convergence or a predefined maximum number of iterations is reached.
 - [https://github.com/ytye/PnpProbs PnpProbs's github]
 
-=== [http://www.jsoftware.us/vol13/312-T017.pdf Pro-malign (2018)]
+=== [http://www.jsoftware.us/vol13/312-T017.pdf 22. Pro-malign (2018)]
 Its realignment does not employ iterative methods.
 . Create two new families based on the distance matrix obtain from the initial alignment.
 . Realign the two families.
 - The source code is not publicized.
-
 
 == [realigner_ver.html Realigners based on vertical partitioning]
 
 == [realigner_hor.html Realigners based on horizontal partitioning]
 
 == [realigner_both.html Realigners based on vertical and horizontal partitioning]
+
+== Realignment in MSA tools
+
+=== [realign_msa_ver.html Vertical-oriented realignment in MSA tools]
