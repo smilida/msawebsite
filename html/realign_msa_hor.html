@@ -38,9 +38,15 @@ MathJax.Hub.Config({
 <h1><a href="realignment.html" target=&ldquo;blank&rdquo;>Realignment Methods</a></h1>
 </div>
 <h2>Horizontal-oriented realignment in MSA tools</h2>
-<h3>1. MULTALIGN (1987)</h3>
-<h3>2. PRRP (1996)</h3>
-<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>3. MLAGAN (2002)</a></h3>
+<h3><a href="https://www.sciencedirect.com/science/article/pii/S0022283696906798" target=&ldquo;blank&rdquo;>1. PRRP (1996)</a></h3>
+<p>Its horizontal-oriented refinement idea is the similar as MUSCLE.
+</p>
+<ul>
+<li><p><a href="ftp.genome.ad.jp" target=&ldquo;blank&rdquo;>FTP</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://genome.cshlp.org/content/13/4/721.full" target=&ldquo;blank&rdquo;>2. MLAGAN (2002)</a></h3>
 <p>The tool's realignment is optional, which is also single-type partitioning, following:
 </p>
 <ol>
@@ -56,9 +62,38 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h3>4. MAFFT</h3>
-<h3>5. MUSCLE</h3>
-<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>6. ProbCons (2004)</a></h3>
+<h3><a href="https://link.springer.com/protocol/10.1007/978-1-62703-646-7_8" target=&ldquo;blank&rdquo;>3. MAFFT (2002)</a></h3>
+<p>Tree-dependent partitioning realignment
+</p>
+<p>In one cycle of iterative refinement, all the branches in the guide tree are tried as partitioning points.
+</p>
+<ul>
+<li><p><a href="https://mafft.cbrc.jp/alignment/software/" target=&ldquo;blank&rdquo;>MAFFT's homepage</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/nar/article/32/5/1792/2380623" target=&ldquo;blank&rdquo;>4. MUSCLE3 (2004)</a></h3>
+<p>Tree-dependent partitioning realignment:
+</p>
+<ol>
+<li><p>Randomly divide the alignment into two profiles based on an edge of TREE.
+</p>
+</li>
+<li><p>A new alignment is obtained by realigning the two profiles.
+</p>
+</li>
+<li><p>If the SP score is improved, the new alignment is kept.
+</p>
+</li>
+</ol>
+<p>Until convergence or until a user‐defined limit is reached.
+</p>
+<ul>
+<li><p><a href="https://drive5.com/muscle/" target=&ldquo;blank&rdquo;>MUSCLE's homepage</a>
+</p>
+</li>
+</ul>
+<h3><a href="https://genome.cshlp.org/content/15/2/330.short" target=&ldquo;blank&rdquo;>5. ProbCons (2004)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -76,8 +111,7 @@ MathJax.Hub.Config({
 </p>
 </li>
 </ul>
-<h3>7. Opal (2004)</h3>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>8. PRIME (2006)</a></h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-524" target=&ldquo;blank&rdquo;>6. PRIME (2006)</a></h3>
 <p>Before the realignment, this tool calculate a distance matrix from the initial alignment, construct a phylogenetic tree from the distance matrix, calculate pair weights from the phylogenetic tree, then <b>iteratively realign</b> the alignment using the phylogenetic tree and the pair weights:
 </p>
 <p>Tree-dependent partitioning realignment:
@@ -98,7 +132,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>9. MANGO (2007)</a></h3>
+<h3><a href="https://www.worldscientific.com/doi/abs/10.1142/9781860948732_0026" target=&ldquo;blank&rdquo;>7. MANGO (2007)</a></h3>
 <p>Single-type partitioning realignment:
 </p>
 <ol>
@@ -116,7 +150,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>10. COBALT (2007)</a></h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/23/9/1073/272774" target=&ldquo;blank&rdquo;>8. COBALT (2007)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -133,11 +167,11 @@ Get a new alignment until no better weighted SP score is obtained.
 <li><p>(Optional) Perform refinement by determining a new set of constraints and iterative tree-dependent partitioning realignment.
 </p>
 </li>
-<li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>The source code link is unavailable.</a>
+<li><p><a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/cobalt" target=&ldquo;blank&rdquo;>FTP</a>
 </p>
 </li>
 </ul>
-<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>11. PRALINE™ (2008)</a></h3>
+<h3><a href="https://academic.oup.com/bioinformatics/article/24/4/492/207730" target=&ldquo;blank&rdquo;>9. PRALINE™ (2008)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -158,8 +192,15 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3>12. IPAM (2009)</h3>
-<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>13. MSAProbs (2010)</a></h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/5223562" target=&ldquo;blank&rdquo;>10. IPAM (2009)</a></h3>
+<p>Its horizontal-oriented refinement idea is the same as MUSCLE.
+</p>
+<ul>
+<li><p>The source code is not publicized.
+</p>
+</li>
+</ul>
+<h3><a href="https://academic.oup.com/bioinformatics/article/26/16/1958/218540" target=&ldquo;blank&rdquo;>11. MSAProbs (2010)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -177,7 +218,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>14. MSACompro (2011)</a></h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-472#Sec2" target=&ldquo;blank&rdquo;>12. MSACompro (2011)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -195,7 +236,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>15. PAAA (2011)</a></h3>
+<h3><a href="https://link.springer.com/chapter/10.1007/978-3-642-24855-9_26" target=&ldquo;blank&rdquo;>13. PAAA (2011)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -219,7 +260,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>16. MMSA (2012)</a></h3>
+<h3><a href="https://link.springer.com/article/10.1186/1471-2105-13-64" target=&ldquo;blank&rdquo;>14. MMSA (2012)</a></h3>
 <p>This tool implements three different horizontal partitioning methods to realign:
 </p>
 <ol>
@@ -238,7 +279,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>17. GLProbs (2013)</a></h3>
+<h3><a href="https://dl.acm.org/doi/abs/10.1145/2506583.2506611" target=&ldquo;blank&rdquo;>15. GLProbs (2013)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -256,7 +297,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https" target=&ldquo;blank&rdquo;>18. Javad Sadri's work (2013)</a></h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/6637352" target=&ldquo;blank&rdquo;>16. Javad Sadri's work (2013)</a></h3>
 <p>Tree-dependent partitioning realignment:
 </p>
 <ol>
@@ -277,7 +318,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>19. Motalign (2013)</a></h3>
+<h3><a href="https://ieeexplore.ieee.org/abstract/document/6621350" target=&ldquo;blank&rdquo;>17. Motalign (2013)</a></h3>
 <p>Its horizontal-oriented refinement idea is the same as MUSCLE.
 </p>
 <ul>
@@ -285,7 +326,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>20. QuickProbs (2014)</a></h3>
+<h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088901" target=&ldquo;blank&rdquo;>18. QuickProbs (2014)</a></h3>
 <p>Its horizontal-oriented refinement idea is the same as MSAProbs.
 </p>
 <p>QuickProbs2 is the last version.
@@ -295,7 +336,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>21. PnpProbs (2016)</a></h3>
+<h3><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1121-7" target=&ldquo;blank&rdquo;>19. PnpProbs (2016)</a></h3>
 <p>Random partitioning realignment:
 </p>
 <ol>
@@ -313,7 +354,7 @@ Get a new alignment until no better weighted SP score is obtained.
 </p>
 </li>
 </ul>
-<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>22. Pro-malign (2018)</a></h3>
+<h3><a href="http://www.jsoftware.us/vol13/312-T017.pdf" target=&ldquo;blank&rdquo;>20. Pro-malign (2018)</a></h3>
 <p>Its realignment does not employ iterative methods.
 </p>
 <ol>
