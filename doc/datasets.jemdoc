@@ -19,6 +19,12 @@
 
 - 人类基因组基因，含有21个人的完整基因。因数据量过大，仅提供基因组的下载链接。
 - [http://lab.malab.cn/~cjt/MSA/data/Human_Genome_21.html link]
+- 注意：CHM13\_T2T\_v1.1 已经更新为 CHM13\_T2T\_v2.0，请使用 [https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/CHM13/assemblies/analysis_set/chm13v2.0.fa.gz 这个链接] 获取。
+
+- 人类 Y 染色体基因组，一共44条，均由多个片段拼接而成（参考序列见 CHM13\_T2T_\v2.0）
+- [ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/working/20230412_sigY_assembly_data/assemblies/verkko_1.0_release/chrY/ Link]
+- Ref1: Hallast, Pille, et al. "Assembly of 43 human Y chromosomes reveals extensive complexity and variation." Nature (2023): 1-10.
+- Ref2: Rhie, Arang, et al. "The complete sequence of a human Y chromosome." Nature (2023): 1-11.
 
 === 16S rRNA
 
@@ -45,14 +51,17 @@
 - [http://lab.malab.cn/~tfr/HAlign3_testdata/sars_cov_2_1Mseq.tar.xz]
 - 新冠病毒基因序列，总共24310条，相似度较高，长度大于29000bp
 - [http://lab.malab.cn/~cjt/MSA/data/SARS-CoV-2.7z]
+- 新冠病毒基因序列，总共15900933条，长度层次不齐，长度大于29000bp
+    (序列已对齐，对比前请去除'-')
+- [http://lab.malab.cn/soft/halign/data/hCoV-19_msa_20230822.tar.xz]
 
 === 猴痘数据集
 
-- 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1519 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230\~210919 之间，平均长度 197103
-- 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4072 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17\~228869 之间，平均长度 175611
-- 最后更新日期：2023-03-16
+- 完整数据集（即完整测序的数据集 MPoxBR.complete.fasta.xz）相似度较高，有 1739 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 183230\~210919 之间，平均长度 197135
+- 部分数据集（即部分测序的数据集 PoxBR.incomplete.fasta.xz）相似度较低，有 4631 条序列，没有对齐，fasta 格式的 DNA 数据集，长度在 17\~228869 之间，平均长度 177921
+- 最后更新日期：2023-08-19
 - [https://github.com/malabz/MPoxVR_dataset Dataset Mainpage]
-- [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230316 Dataset Link]
+- [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230819 Dataset Link]
 
 == DNA/RNA模拟数据集
 
