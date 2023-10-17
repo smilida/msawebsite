@@ -26,6 +26,17 @@
 - Ref1: Hallast, Pille, et al. "Assembly of 43 human Y chromosomes reveals extensive complexity and variation." Nature (2023): 1-10.
 - Ref2: Rhie, Arang, et al. "The complete sequence of a human Y chromosome." Nature (2023): 1-11.
 
+- 3 条人类 1 号染色体，fasta 格式。由于数据过大，采用了分卷压缩
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.001 part 1]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.002 part 2]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.003 part 3]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.004 part 4]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.005 part 5]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.006 part 6]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.007 part 7]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.008 part 8]
+- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.009 part 9]
+
 === 16S rRNA
 
 - 16S rRNA基因是细菌上编码rRNA相对应的DNA序列，相似度不高，最大长度1586bp
@@ -62,6 +73,19 @@
 - 最后更新日期：2023-08-19
 - [https://github.com/malabz/MPoxVR_dataset Dataset Mainpage]
 - [https://github.com/malabz/MPoxVR_dataset/releases/tag/20230819 Dataset Link]
+
+=== Neisseria-meningitidis
+- 5 条序列，长度为 2,190,088，fasta 格式
+- [https://github.com/malabz/Halign-G/raw/main/data/Neisseria-meningitidis.zip download link]
+
+=== Streptococcus-pneumoniae
+- 11 条序列，长度 2,138,975\~2,139,054，fasta 格式
+- [https://github.com/malabz/Halign-G/raw/main/data/Streptococcus-pneumoniae.zip download link]
+
+=== Escherichia-coil
+- 30 条序列，长度 5,060,511\~5,060,749，fasta 格式。由于数据过大，采用了分卷压缩
+- [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.001 download part 1]
+- [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.002 download part 2]
 
 == DNA/RNA模拟数据集
 
