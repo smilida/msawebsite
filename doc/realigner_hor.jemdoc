@@ -39,7 +39,7 @@ In each iteration:
 
 Until the alignment score saturates to a stable value or until the iteration cycle terminates.
 - Test data: Protein ([http://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml CDD] and PFAM)
-- [ftp://ftp.ncbi.nih.gov/pub/REFINER The source code link is unavailable.]
+- [ftp://ftp.ncbi.nih.gov/pub/REFINER FTP server]
 
 === [https://link.springer.com/article/10.1186/1471-2105-15-265 5. ReformAlign (2014)]
 

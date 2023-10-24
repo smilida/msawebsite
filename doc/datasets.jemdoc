@@ -17,25 +17,19 @@
 
 === Human Genome
 
-- 人类基因组基因，含有21个人的完整基因。因数据量过大，仅提供基因组的下载链接。
-- [http://lab.malab.cn/~cjt/MSA/data/Human_Genome_21.html link]
+==== 人类基因组基因
+- 含有21个人的完整基因,因数据量过大，仅提供基因组的[http://lab.malab.cn/~cjt/MSA/data/Human_Genome_21.html 下载链接]。
 - 注意：CHM13\_T2T\_v1.1 已经更新为 CHM13\_T2T\_v2.0，请使用 [https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/CHM13/assemblies/analysis_set/chm13v2.0.fa.gz 这个链接] 获取。
 
-- 人类 Y 染色体基因组，一共44条，均由多个片段拼接而成（参考序列见 CHM13\_T2T_\v2.0）
-- [ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/working/20230412_sigY_assembly_data/assemblies/verkko_1.0_release/chrY/ Link]
+==== 人类Y染色体基因组
+- 共44条，均由多个片段拼接而成（参考序列见 CHM13\_T2T_\v2.0）
+- Download: [ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/working/20230412_sigY_assembly_data/assemblies/verkko_1.0_release/chrY/ Link]
 - Ref1: Hallast, Pille, et al. "Assembly of 43 human Y chromosomes reveals extensive complexity and variation." Nature (2023): 1-10.
 - Ref2: Rhie, Arang, et al. "The complete sequence of a human Y chromosome." Nature (2023): 1-11.
 
-- 3 条人类 1 号染色体，fasta 格式。由于数据过大，采用了分卷压缩
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.001 part 1]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.002 part 2]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.003 part 3]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.004 part 4]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.005 part 5]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.006 part 6]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.007 part 7]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.008 part 8]
-- [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.009 part 9]
+==== 3条人类1号染色体
+- 由于数据过大，采用了分卷压缩.
+- Download: [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.001 part 1], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.002 part 2], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.003 part 3], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.004 part 4], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.005 part 5], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.006 part 6], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.007 part 7], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.008 part 8], [https://github.com/malabz/Halign-G/raw/main/data/3-Human-chromosome-1.zip.009 part 9]
 
 === 16S rRNA
 
@@ -76,16 +70,15 @@
 
 === Neisseria-meningitidis
 - 5 条序列，长度为 2,190,088，fasta 格式
-- [https://github.com/malabz/Halign-G/raw/main/data/Neisseria-meningitidis.zip download link]
+- Download: [https://github.com/malabz/Halign-G/raw/main/data/Neisseria-meningitidis.zip link]
 
 === Streptococcus-pneumoniae
 - 11 条序列，长度 2,138,975\~2,139,054，fasta 格式
-- [https://github.com/malabz/Halign-G/raw/main/data/Streptococcus-pneumoniae.zip download link]
+- Download: [https://github.com/malabz/Halign-G/raw/main/data/Streptococcus-pneumoniae.zip link]
 
 === Escherichia-coil
 - 30 条序列，长度 5,060,511\~5,060,749，fasta 格式。由于数据过大，采用了分卷压缩
-- [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.001 download part 1]
-- [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.002 download part 2]
+- Download: [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.001 part 1], [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.002 part 2]
 
 == DNA/RNA模拟数据集
 
