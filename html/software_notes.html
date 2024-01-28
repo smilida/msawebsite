@@ -5,7 +5,8 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>序列比对-DNA</title>
+<title>软件使用
+</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -21,7 +22,7 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">序列比对</div>
-<div class="menu-item"><a href="index.html" class="current">首页</a></div>
+<div class="menu-item"><a href="index.html">首页</a></div>
 <div class="menu-item"><a href="psa.html">双序列比对</a></div>
 <div class="menu-item"><a href="msa.html">多序列比对</a></div>
 <div class="menu-item"><a href="measure.html">评分标准</a></div>
@@ -36,10 +37,19 @@ MathJax.Hub.Config({
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>序列比对-DNA</h1>
+<h1>软件使用
+</h1>
+<div id="subtitle">
+
 </div>
-<p>序列比对是将两个或多个序列排列在一起，标明其相似之处。序列中可以插入间隔（通常用短横线“-”表示）。对应的相同或相似的符号（在核酸中是A, T（或U）, C, G，在蛋白质中是氨基酸残基的单字母表示）排列在同一列上。这一方法常用于研究由共同祖先进化而来的序列，特别是如蛋白质序列或DNA序列等生物序列。在比对中，错配与突变相应，而空位与插入或缺失对应。序列比对还可用于语言进化或文本间相似性之类的研究。
-</p>
+</div>
+<h2><a href="unialigner_install.html" target=&ldquo;blank&rdquo;>unialigner安装踩坑</a>
+</h2>
+<p><a href="https://www.nature.com/articles/s41592-023-01970-4" target=&ldquo;blank&rdquo;><b>unialigner</b></a>是针对超长串联重复区域的序列比对方法，github代码在<a href="https://github.com/seryrzu/unialigner" target=&ldquo;blank&rdquo;>此页面</a>。
+
+
+
+Readme部分对于安装并不友好。在make时候，对cmake和gcc版本有着严格要求，cmake&gt;=3.15，gcc&gt;=9.4，具体内容见详情页面。</p>
 </td>
 </tr>
 </table>

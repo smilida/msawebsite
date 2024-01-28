@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Unialigner软件安装指南</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="realignment.html">Realignment</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_data.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="software_notes.html">软件使用</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Unialigner软件安装指南</h1>
+</div>
+<p><a href="https://www.nature.com/articles/s41592-023-01970-4" target=&ldquo;blank&rdquo;>Unialigner</a> 是发表在 Nature Methods 上的论文中提到的一款软件，旨在实现两条超长串联重复序列的比对。该软件的代码托管在 <a href="https://github.com/seryrzu/unialigner" target=&ldquo;blank&rdquo;>GitHub</a>。
+</p>
+<h2>安装前的注意事项</h2>
+<p>安装 Unialigner 时，请参考项目的 README 文档。以下是安装步骤的简要概述：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ git clone git@github.com:seryrzu/unialigner.git
+</p>
+<p>$ cd unialigner/tandem_aligner
+</p>
+<p>$ make -j4
+</p>
+</div></div>
+<p>请注意，项目最初名为 &lsquo;tandem_aligner&lsquo;，后更名为 &lsquo;unialigner&lsquo;。
+</p>
+<h2>CMake 和 GCC 的版本要求</h2>
+<p>Unialigner 需要 CMake (&gt;= 3.15) 和 GCC (&gt;= 9.4)。如果版本不满足要求，将无法编译。
+</p>
+<h3>CMake 版本过低时的解决方法</h3>
+<p>1. 如有必要，卸载旧版本的 CMake：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ sudo apt-get remove cmake
+</p>
+</div></div>
+<p>2. 从 CMake 官方网站下载最新版本并安装：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ sudo sh cmake-3.15.0-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir
+</p>
+</div></div>
+<p>3. 安装完成后，验证 CMake 版本：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ cmake --version
+</p>
+</div></div>
+<h3>GCC 版本不符合要求时的解决方法</h3>
+<p>1. 尝试通过包管理器安装 GCC 9.4：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ sudo apt-get update
+</p>
+<p>$ sudo apt-get install gcc-9
+</p>
+</div></div>
+<p>2. 如果无法安装，则需从源代码编译（make这一步骤耗时很久）：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ wget https://ftp.gnu.org/gnu/gcc/gcc-9.4.0/gcc-9.4.0.tar.gz
+</p>
+<p>$ tar -xzf gcc-9.4.0.tar.gz
+</p>
+<p>$ cd gcc-9.4.0
+</p>
+<p>$ make -j$(nproc)
+</p>
+<p>$ sudo make install
+</p>
+</div></div>
+<p>3. 安装后设置环境变量：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ export PATH=/usr/local/gcc-9.4.0/bin:$PATH
+</p>
+<p>$ export LD_LIBRARY_PATH=/usr/local/gcc-9.4.0/lib64:$LD_LIBRARY_PATH
+</p>
+</div></div>
+<p>4. 重新加载环境变量并验证 GCC 版本：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ source &nbsp;/.bashrc
+</p>
+<p>$ gcc --version
+</p>
+</div></div>
+<p>确认 CMake 和 GCC 版本符合要求后，设置环境变量并编译：
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ export CC=/usr/local/gcc-9.4.0/bin/gcc
+</p>
+<p>$ export CXX=/usr/local/gcc-9.4.0/bin/g++
+</p>
+<p>$ make
+</p>
+</div></div>
+<p>最终的可执行文件位于 &lsquo;./build/bin/&lsquo; 目录。
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
