@@ -1,0 +1,7 @@
+# jemdoc: menu{MENU}{installnotes.html}, nofooter
+= 软件使用
+
+== [unialigner_install.html unialigner安装踩坑]
+[https://www.nature.com/articles/s41592-023-01970-4 *unialigner*]是针对超长串联重复区域的序列比对方法，github代码在[https://github.com/seryrzu/unialigner 此页面]。
+
+Readme部分对于安装并不友好。在make时候，对cmake和gcc版本有着严格要求，cmake>=3.15，gcc>=9.4，具体内容见详情页面。

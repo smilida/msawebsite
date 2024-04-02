@@ -80,6 +80,19 @@
 - 30 条序列，长度 5,060,511\~5,060,749，fasta 格式。由于数据过大，采用了分卷压缩
 - Download: [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.001 part 1], [https://github.com/malabz/Halign-G/raw/main/data/Escherichia-coil.zip.002 part 2]
 
+=== GMGC 数据集
+
+- Global Microbial Gene Catalog 数据集，fasta 格式。
+- [https://gmgc.embl.de/download.cgi 原始数据下载]
+- [https://github.com/malabz/GMGC-data 按照长度进行分组存储]
+- Ref: Coelho, L.P., et al. Towards the biogeography of prokaryotic genes. Nature 601, 252–256 (2022).
+
+=== HIV 数据集
+- 截至 2021 年的 HIV 数据集，fasta 格式。
+- [https://www.hiv.lanl.gov/content/sequence/NEWALIGN/align.html 原始数据下载]
+- [https://github.com/malabz/HIV-data 按照长度进行分组存储]
+- Ref: https:\/\/www.hiv.lanl.gov\/ [https://www.hiv.lanl.gov/content/sequence/HIV/refer.html 参考如何引用 HIV 数据集]
+
 == DNA/RNA模拟数据集
 
 === Hierarchical tree simulated datasets

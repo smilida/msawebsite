@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{simu_datasets.html}, nofooter
+# jemdoc: menu{MENU}{simu_data.html}, nofooter
 = 使用IQTree和INDELible生成层次树模拟数据集
 
 IQTree是一款构建进化树的软件，INDELible是一款依据进化树生成模拟数据的软件，两者结合使用可以生成层次树模拟数据集。
