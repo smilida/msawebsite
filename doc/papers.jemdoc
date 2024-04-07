@@ -28,11 +28,11 @@
 
 8. [https://doi.org/10.1093/bib/bbad190 *WMSA2*]: a multiple DNA/RNA sequence alignment tool implemented with accurate progressive mode and a fast win-win mode combining the center star and progressive strategies. *Briefings in Bioinformatics*. 2023 ([https://github.com/malabz/WMSA2/ soft])
 
-9. [https://doi.org/10.1093/bioinformatics/btae014 *FMAlign2*]: FMAlign2: a novel fast multiple nucleotide sequence alignment method for ultralong datasets. *Bioinformatics*. 2024 ([https://github.com/malabz/FMAlign2 soft])
+9. [https://doi.org/10.1093/bioinformatics/btae014 *FMAlign2*]: a novel fast multiple nucleotide sequence alignment method for ultralong datasets. *Bioinformatics*. 2024 ([https://github.com/malabz/FMAlign2 soft])
 
 == MSA post-processing
 
-1. [https://doi.org/10.1371/journal.pcbi.1011988 *TPMA*]: TPMA: A two pointers meta-alignment tool to ensemble different multiple nucleic acid sequence alignments. *PLOS COMPUTATIONAL BIOLOGY*. 2024 ([https://github.com/malabz/TPMA soft])
+1. [https://doi.org/10.1371/journal.pcbi.1011988 *TPMA*]: A two pointers meta-alignment tool to ensemble different multiple nucleic acid sequence alignments. *PLOS COMPUTATIONAL BIOLOGY*. 2024 ([https://github.com/malabz/TPMA soft])
 
 == Review
 
