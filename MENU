@@ -3,6 +3,7 @@
 	双序列比对			[psa.html]
 	多序列比对			[msa.html]
 	评分标准		    [measure.html]
+	基因组比对			[mga.html]
 	Realignment			[realignment.html]
 	测试数据集			[datasets.html]
 	生成模拟数据			[simu_data.html]
