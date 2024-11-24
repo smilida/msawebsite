@@ -103,21 +103,28 @@ MAF 格式以块的形式记录基因组比对的同源片段，每个块包括�
 
 </p>
 </li>
-<li><p>随着 Progressive Cactus 使用 <a href="https://github.com/ComparativeGenomicsToolkit/hal" target=&ldquo;blank&rdquo;><b>HAL</b></a>(Hierarchical Alignment Format) 作为输出格式，HAL 逐渐成为多基因组比对领域的主流格式。HAL 是一种层次化的比对格式，用于高效存储多基因组比对结果及其进化关系。
+<li><p>随着 Progressive Cactus 使用 <a href="https://github.com/ComparativeGenomicsToolkit/hal" target=&ldquo;blank&rdquo;><b>HAL</b></a> (Hierarchical Alignment Format) 作为输出格式，HAL 逐渐成为多基因组比对领域的主流格式。HAL 是一种层次化的比对格式，用于高效存储多基因组比对结果及其进化关系。
 它能够以树状结构组织基因组数据，将比对信息与系统发生关系整合在一起，支持表示基因组间的插入、缺失、倒位和其他复杂变异。相比 MAF 格式，HAL 格式具有更高的存储效率，并支持对比对数据的快速查询和灵活操作，是当前多基因组比对分析的重要工具。
+
+</p>
+</li>
+</ul>
+<h3>基准测试数据集</h3>
+<ul>
+<li><p>评估多基因组比对结果是一项极具挑战的任务。除了通过主观的下游分析进行间接验证外，目前较为客观且可量化的方法是基于模拟数据集，通过与“ground truth”进行对比来进行评估。
+</p>
+</li>
+<li><p><a href="https://cgl.gi.ucsc.edu/data/alignathon/index.html" target=&ldquo;blank&rdquo;><b>Alignathon</b></a> 是一个具有代表性的基准，被广泛用于评估 MGA 工具的性能。该基准通过 <a href="https://www.drive5.com/evolver/" target=&ldquo;blank&rdquo;><b>Evolver</b></a> 模拟生成哺乳类和灵长类基因组，并提供多种多基因组比对方法的比对结果及评估指标，长期以来被视为该领域的重要参考标准。然而，随着测序数据规模的迅速增长，Alignathon 的适用性也逐渐显现出一定的局限性。
+</p>
+</li>
+<li><p>由于Alignathon数据集较大，请点击<a href="https://cgl.gi.ucsc.edu/data/alignathon/downloads.html" target=&ldquo;blank&rdquo;><b>此处</b></a>跳转到官方网站下载。
 
 </p>
 </li>
 </ul>
 <h3>评估标准</h3>
 <ul>
-<li><p>评估多基因组比对结果是一项极具挑战的任务。除了通过主观的下游分析进行间接验证外，目前较为客观且可量化的方法是基于模拟数据集，通过与“ground truth”进行对比来进行评估。
-</p>
-</li>
-<li><p><a href="https://cgl.gi.ucsc.edu/data/alignathon/index.html" target=&ldquo;blank&rdquo;><b>Alignatho</b>n</a> 是一个具有代表性的基准，被广泛用于评估 MGA 工具的性能。该基准通过 <a href="https://www.drive5.com/evolver/" target=&ldquo;blank&rdquo;><b>Evolver</b></a> 模拟生成哺乳类和灵长类基因组，并提供多种多基因组比对方法的比对结果及评估指标，长期以来被视为该领域的重要参考标准。然而，随着测序数据规模的迅速增长，Alignathon 的适用性也逐渐显现出一定的局限性。
-</p>
-</li>
-<li><p>在获得比对结果并生成 MAF 文件后，可通过特定评估指标对比对质量进行评估。比对中的残基对集合被称为比对关系。评估比对时，工具通常比较两个 MAF 文件 A 和 B，以评估它们的比对关系。对于模拟数据集，A 表示工具生成的预测比对结果，B 则表示模拟的真实结果。
+<li><p>在获得比对结果并生成 MAF 文件后，可通过特定评估指标对比对质量进行评估。评估比对时，工具通常比较两个 MAF 文件 A 和 B，以评估它们的比对关系。对于模拟数据集，A 表示工具生成的预测比对结果，B 则表示模拟的真实结果。
 评估步骤是使用<a href="https://github.com/dentearl/mafTools" target=&ldquo;blank&rdquo;>mafTools</a>中的<a href="https://github.com/dentearl/mafTools/tree/master/mafComparator" target=&ldquo;blank&rdquo;>mafComparator</a>对A和B进行比较，然后使用<a href="https://github.com/dentearl/mwgAlignAnalysis/blob/master/evaluations/src/comparatorWrapper/comparatorSummarizer.py" target=&ldquo;blank&rdquo;>comparatorSummarizer.py</a>脚本打印结果。
 </p>
 </li>
