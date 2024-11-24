@@ -38,13 +38,16 @@ e. 对每条共线路径执行多序列比对，生成最终的基因组比对�
 - 在前期研究中，主要使用 [https://genome.ucsc.edu/FAQ/FAQformat.html\#format5 *MAF*] (Multiple Alignment Format)格式来表示多基因组比对结果。MAF是一种标准化的文本格式，用于存储多序列比对结果。
 MAF 格式以块的形式记录基因组比对的同源片段，每个块包括比对的得分、比对的序列名称、起始位置、比对方向、序列长度和比对序列内容。其简单且结构化的设计，使其适合表示多基因组间的相似区域，便于后续的注释、变异分析和可视化操作。
 
-- 随着 Progressive Cactus 使用 [https://github.com/ComparativeGenomicsToolkit/hal *HAL*](Hierarchical Alignment Format) 作为输出格式，HAL 逐渐成为多基因组比对领域的主流格式。HAL 是一种层次化的比对格式，用于高效存储多基因组比对结果及其进化关系。
+- 随着 Progressive Cactus 使用 [https://github.com/ComparativeGenomicsToolkit/hal *HAL*] (Hierarchical Alignment Format) 作为输出格式，HAL 逐渐成为多基因组比对领域的主流格式。HAL 是一种层次化的比对格式，用于高效存储多基因组比对结果及其进化关系。
 它能够以树状结构组织基因组数据，将比对信息与系统发生关系整合在一起，支持表示基因组间的插入、缺失、倒位和其他复杂变异。相比 MAF 格式，HAL 格式具有更高的存储效率，并支持对比对数据的快速查询和灵活操作，是当前多基因组比对分析的重要工具。
 
-=== 评估标准
+=== 基准测试数据集
 - 评估多基因组比对结果是一项极具挑战的任务。除了通过主观的下游分析进行间接验证外，目前较为客观且可量化的方法是基于模拟数据集，通过与“ground truth”进行对比来进行评估。
-- [https://cgl.gi.ucsc.edu/data/alignathon/index.html *Alignatho*n] 是一个具有代表性的基准，被广泛用于评估 MGA 工具的性能。该基准通过 [https://www.drive5.com/evolver/ *Evolver*] 模拟生成哺乳类和灵长类基因组，并提供多种多基因组比对方法的比对结果及评估指标，长期以来被视为该领域的重要参考标准。然而，随着测序数据规模的迅速增长，Alignathon 的适用性也逐渐显现出一定的局限性。
-- 在获得比对结果并生成 MAF 文件后，可通过特定评估指标对比对质量进行评估。比对中的残基对集合被称为比对关系。评估比对时，工具通常比较两个 MAF 文件 A 和 B，以评估它们的比对关系。对于模拟数据集，A 表示工具生成的预测比对结果，B 则表示模拟的真实结果。
+- [https://cgl.gi.ucsc.edu/data/alignathon/index.html *Alignathon*] 是一个具有代表性的基准，被广泛用于评估 MGA 工具的性能。该基准通过 [https://www.drive5.com/evolver/ *Evolver*] 模拟生成哺乳类和灵长类基因组，并提供多种多基因组比对方法的比对结果及评估指标，长期以来被视为该领域的重要参考标准。然而，随着测序数据规模的迅速增长，Alignathon 的适用性也逐渐显现出一定的局限性。
+- 由于Alignathon数据集较大，请点击[https://cgl.gi.ucsc.edu/data/alignathon/downloads.html *此处*]跳转到官方网站下载。
+
+=== 评估标准
+- 在获得比对结果并生成 MAF 文件后，可通过特定评估指标对比对质量进行评估。评估比对时，工具通常比较两个 MAF 文件 A 和 B，以评估它们的比对关系。对于模拟数据集，A 表示工具生成的预测比对结果，B 则表示模拟的真实结果。
 评估步骤是使用[https://github.com/dentearl/mafTools mafTools]中的[https://github.com/dentearl/mafTools/tree/master/mafComparator mafComparator]对A和B进行比较，然后使用[https://github.com/dentearl/mwgAlignAnalysis/blob/master/evaluations/src/comparatorWrapper/comparatorSummarizer.py comparatorSummarizer.py]脚本打印结果。
 . *精确度*定义为 A 和 B 的交集中残基对的数量与 A 中总残基对数量的比值，反映了正确比对的比例；
 . *召回率*则定义为 A 和 B 的交集中残基对的数量与 B 中总残基对数量的比值，表示正确比对的覆盖范围。
