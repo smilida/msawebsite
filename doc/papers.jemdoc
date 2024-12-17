@@ -5,9 +5,11 @@
 
 1. [https://academic.oup.com/bioinformatics/article/31/15/2475/188425 *HAlign*]: Fast multiple similar DNA/RNA sequence alignment based on the centre star strategy. *Bioinformatics*. 2015 ([https://github.com/malabz/HAlign soft])
 
-2. [https://link.springer.com/content/pdf/10.1186/s13015-017-0116-x.pdf *HAlign-II*]: efficient ultra-large multiple sequence alignment and phylogenetic tree reconstruction with distributed and parallel computing. *Algorithms for Molecular Biology*. 2017 ([https://github.com/malabz/HAlign soft])
+2. [https://link.springer.com/content/pdf/10.1186/s13015-017-0116-x.pdf *HAlign 2*]: efficient ultra-large multiple sequence alignment and phylogenetic tree reconstruction with distributed and parallel computing. *Algorithms for Molecular Biology*. 2017 ([https://github.com/malabz/HAlign soft])
 
-3. [https://doi.org/10.1093/molbev/msac166 *HAlign-III*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
+3. [https://doi.org/10.1093/molbev/msac166 *HAlign 3*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
+
+4. [https://academic.oup.com/bioinformatics/article/40/12/btae718/7912339 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/malabz/HAlign-4 soft])
 
 
 == MSA
