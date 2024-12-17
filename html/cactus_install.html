@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Cactus的安装和简单使用</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="mga.html">基因组比对</a></div>
+<div class="menu-item"><a href="realignment.html">Realignment</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_data.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="software_notes.html">软件使用</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Cactus的安装和简单使用</h1>
+<div id="subtitle">
+<a href="https://www.nature.com/articles/s41586-020-2871-y" target=&ldquo;blank&rdquo;>Cactus</a>是发表在Nature正刊上的一款多基因组比对软件，能够完成多个物种的基因组比对。其代码可在<a href="https://github.com/ComparativeGenomicsToolkit/cactus" target=&ldquo;blank&rdquo;>Github页面</a>找到。
+
+</div>
+</div>
+<h2>Cactus的安装</h2>
+<p>
+如果要使用源码编译，需要服务器的sudo权限。因此这里我推荐使用作者预先编译好的版本，这里我用<a href="https://github.com/ComparativeGenomicsToolkit/cactus/releases/tag/v2.9.0" target=&ldquo;blank&rdquo;>Cactus v2.9.0</a>作为示例。
+<a href="https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v2.9.0/cactus-bin-v2.9.0.tar.gz" target=&ldquo;blank&rdquo;>此链接</a>为下载包，参考<a href="https://github.com/ComparativeGenomicsToolkit/cactus/blob/v2.9.0/BIN-INSTALL.md" target=&ldquo;blank&rdquo;>此页面</a>进行安装。
+
+首先确认是否安装了&lsquo;virtualenv&lsquo;这个包。
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>virtualenv &ndash;version
+</p>
+</div></div>
+<p>如果没有安装，可以使用以下命令安装
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>python3 -m pip install virtualenv
+</p>
+</div></div>
+<p>下载预编译包后，解压并进入文件夹
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ tar -xzf cactus-bin-v2.9.0.tar.gz
+<br />
+$ cd cactus-bin-v2.9.0
+</p>
+</div></div>
+<p>然后运行以下命令进行配置安装
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ virtualenv -p python3.8 venv-cactus-v2.9.0
+<br />
+$ printf &ldquo;export PATH=$(pwd)/bin:$PATH; export PYTHONPATH=$(pwd)/lib:$PYTHONPATH&rdquo; &gt;&gt; venv-cactus-v2.9.0/bin/activate
+<br />
+$ source venv-cactus-v2.9.0/bin/activate
+<br />
+$ python3 -m pip install -U setuptools pip wheel
+<br />
+$ python3 -m pip install -U .
+<br />
+$ python3 -m pip install -U -r ./toil-requirement.txt
+</p>
+</div></div>
+<p>基本会一切顺利完成cactus的安装，这时候可以使用简单的样例来测试cactus的使用。<br />
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ cactus ./jobstore ./examples/evolverMammals.txt ./evolverMammals.hal &ndash;realTimeLogging
+</p>
+</div></div>
+<h2>Cactus的简单使用</h2>
+<p>
+cactus的使用教程可以参考<a href="https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md" target=&ldquo;blank&rdquo;>官方页面</a><br />
+我的使用命令为
+
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>$ cactus /path/to/js /path/to/seqfile /path/to/output/hal &ndash;workDir /path/to/workdir
+</p>
+</div></div>
+<p>1. /path/to/js 这个文件夹我也不知道放什么，只要确保为空文件夹或不存在就好<br />
+
+2. /path/to/seqfile 存放进化树和数据位置，示例如下
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p>(Crab_eating_macaque:0.33, (Gibbons:5.08, (Orangutans:3.17, (Gorillas:4.00, (Chimpanzees:6.83, Humans:1.94)anc3e:5.56)anc4e:2.38)anc5e:0.77)anc2e:0.75);
+<br />
+Humans /path/to/Humans.fna
+<br />
+Chimpanzees /path/to/Chimpanzees.fna
+<br />
+Gorillas /path/to/Gorillas.fna
+<br />
+Orangutans /path/to/Orangutans.fna
+<br />
+Gibbons /path/to/Gibbons.fna
+<br />
+Crab_eating_macaque /path/to/Crab_eating_macaque.fna
+</p>
+</div></div>
+<p>第一行为进化树，必须要严格符合Newick格式。第二部分是各个物种fasta文件的位置，可以是本地位置，也可以是url链接。<br />
+
+3. /path/to/output/hal是输出的hal文件<br />
+
+4. &ndash;workDir /path/to/workdir 应该是存放中间文件位置，确保该文件夹的硬盘空间足够大，不然可能会报错。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
