@@ -11,8 +11,6 @@
 
 4. [https://academic.oup.com/bioinformatics/article/40/12/btae718/7912339 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/malabz/HAlign-4 soft])
 
-4. [https://doi.org/10.1093/bioinformatics/btae718 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/metaphysicser/HAlign-4 soft])
-
 == MSA
 
 1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*]: a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
