@@ -9,6 +9,7 @@
 
 3. [https://doi.org/10.1093/molbev/msac166 *HAlign-III*]: fast multiple alignment of ultra-large numbers of similar DNA/RNA sequences. *Molecular Biology and Evolution*. 2022 ([https://github.com/malabz/HAlign-3 soft])
 
+4. [https://doi.org/10.1093/bioinformatics/btae718 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/metaphysicser/HAlign-4 soft])
 
 == MSA
 
@@ -35,6 +36,9 @@
 1. [https://doi.org/10.1371/journal.pcbi.1011988 *TPMA*]: A two pointers meta-alignment tool to ensemble different multiple nucleic acid sequence alignments. *PLOS COMPUTATIONAL BIOLOGY*. 2024 ([https://github.com/malabz/TPMA soft])
 
 2. [https: *ReAlign-N*]: an integrated realignment approach for multiple nucleic acid sequence alignment, combining global and local realignments. *NAR Genomics and Bioinformatics*. 2024 ([https://github.com/malabz/ReAlign-N soft])
+
+== MGA
+1. [https://doi.org/10.1101/gr.279763.124 Fast sequence alignment for centromere with RaMA]. *Genome Research*. 2025 ([https://github.com/metaphysicser/RaMA soft])
 
 == Review
 
