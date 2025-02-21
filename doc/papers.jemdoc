@@ -11,7 +11,6 @@
 
 4. [https://academic.oup.com/bioinformatics/article/40/12/btae718/7912339 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/malabz/HAlign-4 soft])
 
-
 == MSA
 
 1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*]: a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
@@ -39,6 +38,9 @@
 1. [https://doi.org/10.1371/journal.pcbi.1011988 *TPMA*]: A two pointers meta-alignment tool to ensemble different multiple nucleic acid sequence alignments. *PLOS COMPUTATIONAL BIOLOGY*. 2024 ([https://github.com/malabz/TPMA soft])
 
 2. [https://academic.oup.com/nargab/article/6/4/lqae170/7928182 *ReAlign-N*]: an integrated realignment approach for multiple nucleic acid sequence alignment, combining global and local realignments. *NAR Genomics and Bioinformatics*. 2024 ([https://github.com/malabz/ReAlign-N soft])
+
+== MGA
+1. [https://doi.org/10.1101/gr.279763.124 Fast sequence alignment for centromere with RaMA]. *Genome Research*. 2025 ([https://github.com/metaphysicser/RaMA soft])
 
 == Review
 
