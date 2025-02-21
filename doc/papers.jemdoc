@@ -31,8 +31,6 @@
 
 9. [https://doi.org/10.1093/bioinformatics/btae014 *FMAlign2*]: a novel fast multiple nucleotide sequence alignment method for ultralong datasets. *Bioinformatics*. 2024 ([https://github.com/malabz/FMAlign2 soft])
 
-10. [https://doi.org/ *FORAlign*]: Accelerating gap-affine DNA pairwise sequence alignment using FOR-blocks based on FOur Russians approach with linear space complexity. *Briefings in Bioinformatics*. 2025 ([https://github.com/malabz/FORAlign soft])
-
 == MSA post-processing
 
 1. [https://doi.org/10.1371/journal.pcbi.1011988 *TPMA*]: A two pointers meta-alignment tool to ensemble different multiple nucleic acid sequence alignments. *PLOS COMPUTATIONAL BIOLOGY*. 2024 ([https://github.com/malabz/TPMA soft])
@@ -40,7 +38,13 @@
 2. [https://academic.oup.com/nargab/article/6/4/lqae170/7928182 *ReAlign-N*]: an integrated realignment approach for multiple nucleic acid sequence alignment, combining global and local realignments. *NAR Genomics and Bioinformatics*. 2024 ([https://github.com/malabz/ReAlign-N soft])
 
 == MGA
+
 1. [https://doi.org/10.1101/gr.279763.124 Fast sequence alignment for centromere with RaMA]. *Genome Research*. 2025 ([https://github.com/metaphysicser/RaMA soft])
+
+== PSA
+
+1. [https://doi.org/10.1093/bib/bbaf061 *FORAlign*]: Accelerating gap-affine DNA pairwise sequence alignment using FOR-blocks based on FOur Russians approach with linear space complexity. *Briefings in Bioinformatics*. 2025 ([https://github.com/malabz/FORAlign soft])
+
 
 == Review
 
