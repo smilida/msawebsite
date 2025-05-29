@@ -25,3 +25,18 @@ Klib 追求高效和小内存占用。在速度和内存使用方面，一些组
 
 === 项目路径
 [https://github.com/malabz/parallel-suffixArray 项目路径]
+
+== FM-index
+=== 简介：
+FM-index 是一种基于 Burrows-Wheeler 变换（BWT）的压缩全文索引结构，广泛应用于生物信息学中的序列比对任务。它兼具压缩性与高效查询性能，能够在不解压原始数据的情况下完成快速的子串搜索。本模块实现了一个基础的 FM-index，旨在为开发人员在构建比对算法或处理大规模基因序列数据时提供参考与帮助。该实现具有较强的可读性和扩展性，适合用于学习、研究或作为更复杂系统的构建基础。
+
+特点:
+
+1. 给出[https://github.com/y-256/libdivsufsort divsufsort], [https://github.com/alshai/Big-BWT Big-BWT]和[https://github.com/jamshed/CaPS-SA CaPS-SA]三种后缀数组构造方式，适用于不同大小的数据集
+
+2. 使用[https://github.com/simongog/sdsl-lite sdsl]的基于哈夫曼编码的小波树存储BWT，支持快速的rank和select操作
+
+3. 给出三种模式的模式匹配函数，支持不同灵敏度的搜索
+
+=== 项目地址
+仍在开发测试中

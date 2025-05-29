@@ -11,6 +11,13 @@
 
 4. [https://academic.oup.com/bioinformatics/article/40/12/btae718/7912339 *HAlign 4*]: a new strategy for rapidly aligning millions of sequences. *Bioinformatics*. 2024 ([https://github.com/malabz/HAlign-4 soft])
 
+
+== FMAlign
+
+1. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. *Briefings in Bioinformatics*. 2021
+
+2. [https://doi.org/10.1093/bioinformatics/btae014 *FMAlign2*]: a novel fast multiple nucleotide sequence alignment method for ultralong datasets. *Bioinformatics*. 2024 ([https://github.com/malabz/FMAlign2 soft])
+
 == MSA
 
 1. [https://pubmed.ncbi.nlm.nih.gov/28646874/ *CMSA*]: a heterogeneous CPU\/GPU computing system for multiple similar RNA/DNA sequence alignment. *BMC Bioinformatics*. 2017 ([https://github.com/wangvsa/CMSA soft])
@@ -21,15 +28,11 @@
 
 4. [http://www.jgenetgenomics.org/en/article/doi/10.1016/j.jgg.2018.07.004 *VCSRA*]: A fast and accurate multiple sequence alignment algorithm with a high degree of parallelism. *Journal of Genetics and Genomics*. 2018 ([https://github.com/DongDongNeophyte/VCSRA_code soft])
 
-5. [https://academic.oup.com/bib/article/23/1/bbab519/6458932 *FMAlign*]: A novel fast multiple nucleotide sequence alignment method based on FM-index. *Briefings in Bioinformatics*. 2021
+5. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
 
-6. [http://www.juestc.uestc.edu.cn/cn/article/doi/10.12178/1001-0548.2021406 Improved Center Star Alignment Algorithm Based on Profile Alignment]. *Journal of University of Electronic Science and Technology of China*. 2022
+6. [https://doi.org/10.1093/bioinformatics/btac658 *WMSA*]: a novel method for multiple sequence alignment of DNA sequences. *Bioinformatics*. 2022 ([https://github.com/malabz/WMSA/ soft])
 
-7. [https://doi.org/10.1093/bioinformatics/btac658 *WMSA*]: a novel method for multiple sequence alignment of DNA sequences. *Bioinformatics*. 2022 ([https://github.com/malabz/WMSA/ soft])
-
-8. [https://doi.org/10.1093/bib/bbad190 *WMSA2*]: a multiple DNA/RNA sequence alignment tool implemented with accurate progressive mode and a fast win-win mode combining the center star and progressive strategies. *Briefings in Bioinformatics*. 2023 ([https://github.com/malabz/WMSA2/ soft])
-
-9. [https://doi.org/10.1093/bioinformatics/btae014 *FMAlign2*]: a novel fast multiple nucleotide sequence alignment method for ultralong datasets. *Bioinformatics*. 2024 ([https://github.com/malabz/FMAlign2 soft])
+7. [https://doi.org/10.1093/bib/bbad190 *WMSA2*]: a multiple DNA/RNA sequence alignment tool implemented with accurate progressive mode and a fast win-win mode combining the center star and progressive strategies. *Briefings in Bioinformatics*. 2023 ([https://github.com/malabz/WMSA2/ soft])
 
 == MSA post-processing
 
