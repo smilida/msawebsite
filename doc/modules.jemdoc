@@ -13,9 +13,29 @@ Klib 追求高效和小内存占用。在速度和内存使用方面，一些组
 [https://github.com/metaphysicser/klib/tree/main/klib klib文件夹]存放修改后的klib代码，[https://github.com/metaphysicser/klib/tree/main/docs docs文件夹]存放常用头文件的教程，如kvec.h, kseq.h, kthread.h等。
 
 
+== 基于四俄国人思想的双序列比对算法模块
+
+=== 简介：
+基于四俄国人思想的双序列比对算法是一种并行求解双序列比对的算法，对[http://lab.malab.cn/~cjt/MSA/psa.html 分治法-线性空间改进算法]进行进一步的并行化，减少了计算量。
+
+该库不仅可以直接通过程序调用，也可以通过库进行调用。
+
+建议在序列相似度较低时使用。
+
+=== 用法：
+参考 [https://github.com/malabz/FORAlign?tab=readme-ov-file\#for-development usage]
+
+=== 项目地址：
+[https://github.com/malabz/FORAlign 项目路径]
+
+=== 文献引用：
+Wei, Y., Zhou, T., Zhai, Y., Yu, L., & Zou, Q. (2025). FORAlign: accelerating gap-affine DNA pairwise sequence alignment using FOR-blocks based on Four Russians approach with linear space complexity. Briefings in Bioinformatics, 26(1), bbaf061.
+
+
+
 == 并行后缀数组
 
-=== 介绍：
+=== 简介：
 部分后缀数组方法（如 DC3 等）采用基数排序完成，由于基数排序并行较为容易，因此有一些开发并行基数排序以实现并行后缀数组的方法。本项目进行了部分整理。
 
 注意：由于 Cilk 已经被 [https://gcc.gnu.org/gcc-7/changes.html gcc-7] 弃用，因此采用 OpenMP 进行并行，代码中对于 OpenMP 的支持不足。
@@ -23,7 +43,7 @@ Klib 追求高效和小内存占用。在速度和内存使用方面，一些组
 === 用法：
 参考 [https://github.com/malabz/parallel-suffixArray\#usage usage]
 
-=== 项目路径
+=== 项目地址
 [https://github.com/malabz/parallel-suffixArray 项目路径]
 
 == FM-index

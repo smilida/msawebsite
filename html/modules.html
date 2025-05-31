@@ -49,8 +49,25 @@ MathJax.Hub.Config({
 <h3>用法：</h3>
 <p><a href="https://github.com/metaphysicser/klib/tree/main/klib" target=&ldquo;blank&rdquo;>klib文件夹</a>存放修改后的klib代码，<a href="https://github.com/metaphysicser/klib/tree/main/docs" target=&ldquo;blank&rdquo;>docs文件夹</a>存放常用头文件的教程，如kvec.h, kseq.h, kthread.h等。
 </p>
+<h2>基于四俄国人思想的双序列比对算法模块</h2>
+<h3>简介：</h3>
+<p>基于四俄国人思想的双序列比对算法是一种并行求解双序列比对的算法，对<a href="http://lab.malab.cn/~cjt/MSA/psa.html" target=&ldquo;blank&rdquo;>分治法-线性空间改进算法</a>进行进一步的并行化，减少了计算量。
+</p>
+<p>该库不仅可以直接通过程序调用，也可以通过库进行调用。
+</p>
+<p>建议在序列相似度较低时使用。
+</p>
+<h3>用法：</h3>
+<p>参考 <a href="https://github.com/malabz/FORAlign?tab=readme-ov-file#for-development" target=&ldquo;blank&rdquo;>usage</a>
+</p>
+<h3>项目地址：</h3>
+<p><a href="https://github.com/malabz/FORAlign" target=&ldquo;blank&rdquo;>项目路径</a>
+</p>
+<h3>文献引用：</h3>
+<p>Wei, Y., Zhou, T., Zhai, Y., Yu, L., &amp; Zou, Q. (2025). FORAlign: accelerating gap-affine DNA pairwise sequence alignment using FOR-blocks based on Four Russians approach with linear space complexity. Briefings in Bioinformatics, 26(1), bbaf061.
+</p>
 <h2>并行后缀数组</h2>
-<h3>介绍：</h3>
+<h3>简介：</h3>
 <p>部分后缀数组方法（如 DC3 等）采用基数排序完成，由于基数排序并行较为容易，因此有一些开发并行基数排序以实现并行后缀数组的方法。本项目进行了部分整理。
 </p>
 <p>注意：由于 Cilk 已经被 <a href="https://gcc.gnu.org/gcc-7/changes.html" target=&ldquo;blank&rdquo;>gcc-7</a> 弃用，因此采用 OpenMP 进行并行，代码中对于 OpenMP 的支持不足。
@@ -58,7 +75,7 @@ MathJax.Hub.Config({
 <h3>用法：</h3>
 <p>参考 <a href="https://github.com/malabz/parallel-suffixArray#usage" target=&ldquo;blank&rdquo;>usage</a>
 </p>
-<h3>项目路径</h3>
+<h3>项目地址</h3>
 <p><a href="https://github.com/malabz/parallel-suffixArray" target=&ldquo;blank&rdquo;>项目路径</a>
 </p>
 <h2>FM-index</h2>
