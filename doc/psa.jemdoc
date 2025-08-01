@@ -125,6 +125,28 @@ c[i-1,j]-egap
 
 [https://github.com/Guuhua/PSA/blob/main/python/PSA_Kband.py Python] [https://github.com/Guuhua/PSA/blob/main/java/Kband.java Java] [https://github.com/Guuhua/PSA/blob/main/c/PSA_kband.c C]
 
+=== 分治法-线性空间改进仿射罚分算法
+
+在简单双序列比对算法的基础上，需要设计分治及最优点生成策略。
+
+~~~
+{算法思路简介}
+选取序列s的中间位点i, 求解序列t的中间位点j：
+. s\[i\]与t\[j\]对齐
+. s\[i\]和s\[i+1\]和与\-对齐
+
+注：j 值是遍历1..n取得分最高的值，通过不断分治，最后得到比对的结果；另外，需要对分治参数传递和边界条件进行进一步考虑
+~~~
+
+前人实现了基于四俄国人思想的双序列比对算法模块：
+
+Ref: Wei, Y., Zhou, T., Zhai, Y., Yu, L., & Zou, Q. (2025). FORAlign: accelerating gap-affine DNA pairwise sequence alignment using FOR-blocks based on Four Russians approach with linear space complexity. Briefings in Bioinformatics, 26(1), bbaf061.
+
+
+[https://github.com/malabz/FORAlign 实现代码]
+[https://github.com/malabz/FORAlign?tab=readme-ov-file\#for-development 使用方法]
+
+
 == 基于同源区段对齐的双序列比对
 
 基于同源区段对齐的比对是先将一条序列进行快速索引，通过快速索引可快速遍历得到两条序列之间的同源区段。选出合适的同源区段，并将其对齐，剩下未对齐的序列采用动态规划的方法对齐，最后将所有对齐的片段拼接起来，得到最终结果。
