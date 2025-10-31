@@ -40,7 +40,9 @@
 
 2. [https://academic.oup.com/nargab/article/6/4/lqae170/7928182 *ReAlign-N*]: an integrated realignment approach for multiple nucleic acid sequence alignment, combining global and local realignments. *NAR Genomics and Bioinformatics*. 2024 ([https://github.com/malabz/ReAlign-N soft])
 
-3. ReAlign-Star: an optimized realignment method for multiple sequence alignment, targeting star algorithm tools. *International Conference on Intelligent Computing*. 2025 ([https://github.com/malabz/ReAlign-Star soft])
+3. [https://link.springer.com/chapter/10.1007/978-981-95-0030-7_38 *ReAlign-Star*]: an optimized realignment method for multiple sequence alignment, targeting star algorithm tools. *International Conference on Intelligent Computing*. 2025 ([https://github.com/malabz/ReAlign-Star soft])
+
+4. [https://academic.oup.com/bioinformatics/article/41/8/btaf421/8213638?login=false *ReAlign-P*]: a vertical iterative realignment method for protein multiple sequence alignment. *Bioinformatics*. 2025 ([https://github.com/malabz/ReAlign-P soft])
 
 == PSA
 
@@ -55,3 +57,5 @@
 1. [https://www.mdpi.com/2218-273X/12/4/546 Developments in Algorithms for Sequence Alignment]: A Review. *Biomolecules*. 2022
 
 2. [https://doi.org/10.1093/bib/bbac069 A survey on the algorithm and development of multiple sequence alignment]. *Briefings in Bioinformatics*. 2022
+
+3. Advances in post-processing methods for multiple sequence alignment. *Frontiers in Genetics*. 2025
