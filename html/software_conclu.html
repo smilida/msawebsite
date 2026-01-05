@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>发表软件使用指南</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">序列比对</div>
+<div class="menu-item"><a href="index.html">首页</a></div>
+<div class="menu-item"><a href="psa.html">双序列比对</a></div>
+<div class="menu-item"><a href="msa.html">多序列比对</a></div>
+<div class="menu-item"><a href="mga.html">基因组比对</a></div>
+<div class="menu-item"><a href="realignment.html">重比对</a></div>
+<div class="menu-item"><a href="measure.html">评分标准</a></div>
+<div class="menu-item"><a href="datasets.html">测试数据集</a></div>
+<div class="menu-item"><a href="simu_data.html">生成模拟数据</a></div>
+<div class="menu-item"><a href="tools.html">实用工具</a></div>
+<div class="menu-item"><a href="modules.html">实用开发模块</a></div>
+<div class="menu-item"><a href="software_conclu.html" class="current">发表软件使用指南</a></div>
+<div class="menu-item"><a href="software_notes.html">第三方软件避坑技巧</a></div>
+<div class="menu-item"><a href="papers.html">发表论文</a></div>
+<div class="menu-item"><a href="https://github.com/malabz" target="blank">Github</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>发表软件使用指南</h1>
+</div>
+<h2>多序列比对工具</h2>
+<h3>HAlign3(<a href="https://github.com/malabz/HAlign-3" target=&ldquo;blank&rdquo;>soft</a>)</h3>
+<ul>
+<li><p>输入格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>输出格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>适用数据类型：DNA/RNA
+</p>
+</li>
+</ul>
+<h4>运行方式</h4>
+<p>1. 通过Conda安装可执行程序运行
+</p>
+<p>在已正确配置Conda环境并完成安装后，可直接使用如下命令运行：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+$ halign -o input_halign3.fasta -t 5 -c 6 -s input.fasta
+</pre></div></div>
+<p>2. 在Java虚拟机环境中通过JAR包运行
+</p>
+<p>若使用JAR包形式，可在已安装Java环境的情况下，通过以下命令运行：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+$ java -jar HAlign-3.0.0_rc1.jar -o input_halign3.fasta -t 5 -c 6 -s input.fasta
+</pre></div></div>
+<h4>参数说明</h4>
+<ul>
+<li><p>-o：输出结果文件路径
+</p>
+</li>
+<li><p>-t：使用的线程数（用于并行计算）
+</p>
+</li>
+<li><p>-c：指定中心序列的索引（从0开始计数）
+</p>
+</li>
+<li><p>-s：输出结果中不包含序列ID
+</p>
+</li>
+<li><p>input.fasta：输入的 FASTA 格式序列文件（需作为最后一个参数给出）
+</p>
+</li>
+</ul>
+<h4>注意事项</h4>
+<ul>
+<li><p>输入文件必须为标准FASTA格式；
+</p>
+</li>
+<li><p>中心序列索引需小于输入序列总数；
+</p>
+</li>
+<li><p>建议根据计算资源合理设置线程数以获得最佳性能。
+</p>
+</li>
+</ul>
+<h3>HAlign4(<a href="https://github.com/malabz/HAlign-4" target=&ldquo;blank&rdquo;>soft</a>)</h3>
+<ul>
+<li><p>输入格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>输出格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>适用数据类型：DNA/RNA
+</p>
+</li>
+</ul>
+<h4>运行方式</h4>
+<p>1. 通过Conda安装或源码编译安装可执行程序运行，可直接使用如下命令运行：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+$ halign4 input.fasta input_halign4.fasta -t 4 -r center_seq_id -sa 10
+</pre></div></div>
+<h4>参数说明</h4>
+<ul>
+<li><p>input.fasta：输入的FASTA格式序列文件
+</p>
+</li>
+<li><p>input_halign4.fasta：输出结果文件路径
+</p>
+</li>
+<li><p>-t：使用的线程数（用于并行计算）
+</p>
+</li>
+<li><p>-r：指定中心序列的ID
+</p>
+</li>
+<li><p>-sa：全局后缀数组的长度
+</p>
+</li>
+</ul>
+<h3>FMAlign2(<a href="https://github.com/malabz/FMAlign2" target=&ldquo;blank&rdquo;>soft</a>)</h3>
+<ul>
+<li><p>输入格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>输出格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>适用数据类型：DNA/RNA
+</p>
+</li>
+</ul>
+<h4>运行方式</h4>
+<p>1. 通过Conda安装或源码编译安装可执行程序运行，可直接使用如下命令运行：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+$ fmalign2 -i input.fasta -o input_fmalign2.fasta -p /path/to/clustalo-cmd.txt -l 20 -f fast -t 16
+</pre></div></div>
+<h4>参数说明</h4>
+<ul>
+<li><p>-i：输入的FASTA格式序列文件
+</p>
+</li>
+<li><p>-o：输出结果文件路径
+</p>
+</li>
+<li><p>-p：用户自定义调用的MSA命令
+</p>
+</li>
+<li><p>-l：设置最小MEM的长度
+</p>
+</li>
+<li><p>-f：指定过滤模式
+</p>
+</li>
+<li><p>-t：使用的线程数（用于并行计算）
+</p>
+</li>
+</ul>
+<h4>注意事项</h4>
+<ul>
+<li><p>建议优先使用Conda进行软件安装与环境管理，以确保依赖版本的一致性与运行稳定性。
+</p>
+</li>
+<li><p>本程序在默认配置下兼容HAlign3、HAlign4及MAFFT这三款多序列比对工具。
+</p>
+</li>
+<li><p>如需调用其他多序列比对工具，请确保相关软件已提前正确安装并配置至系统环境中。
+</p>
+</li>
+</ul>
+<h3>WMSA2(<a href="https://github.com/malabz/WMSA2/" target=&ldquo;blank&rdquo;>soft</a>)</h3>
+<ul>
+<li><p>输入格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>输出格式：FASTA
+</p>
+</li>
+</ul>
+<ul>
+<li><p>适用数据类型：DNA/RNA
+</p>
+</li>
+</ul>
+<h4>运行方式</h4>
+<p>在Java虚拟机环境中通过JAR包运行以下命令：
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+$ java -jar WMSA2.jar -m Win -s 0.95 -i test.fasta -o test_algined_WMSA2.fasta -t
+</pre></div></div>
+<h4>参数说明</h4>
+<ul>
+<li><p>-i：输入的FASTA格式序列文件
+</p>
+</li>
+<li><p>-o：输出结果文件路径
+</p>
+</li>
+<li><p>-m：比对模式
+</p>
+</li>
+<li><p>-s：设置聚类的相似度
+</p>
+</li>
+<li><p>-t：构建多序列比对使用的进化树
+</p>
+</li>
+</ul>
+<h4>注意事项</h4>
+<ul>
+<li><p>当运行模式（-m）设为win时，方可启用参数-s；在其他模式下该参数不可用。
+</p>
+</li>
+</ul>
+<h2>实用建议</h2>
+<ul>
+<li><p>对于<b>序列相似度较高</b>的比对任务，推荐优先使用HAlign系列工具，以获得更高的效率与稳定性。
+</p>
+</li>
+<li><p>对于<b>超长序列</b>的多序列比对任务，推荐优先使用FMAlign2，其在处理长序列时具有更好的性能表现。
+</p>
+</li>
+<li><p>当<b>序列相似度低于80%</b>时，推荐使用WMSA2，以提高比对结果的准确性。
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>
